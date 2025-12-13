@@ -1,4 +1,11 @@
 export default {
+  header: {
+    home: "Home",
+    components: "Components",
+    figma: "Figma",
+    releases: "Releases",
+  },
+  btnAddTodo: "Add Todo",
   nuxtSiteConfig: {
     name: "Nuxt 4 + Shadcn Boilerplate",
     description: "A Nuxt 4 boilerplate with Shadcn",

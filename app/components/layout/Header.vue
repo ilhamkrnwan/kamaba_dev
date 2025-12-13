@@ -1,7 +1,9 @@
 <template>
-  <UHeader>
+  <UHeader
+    class="w-full lg:w-3/4 lg:mx-auto [&>div:first-child]:max-w-full [&>div:first-child]:px-0"
+  >
     <template #title>
-      <Logo class="h-6 w-auto" />
+      <LayoutLogo />
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
@@ -10,7 +12,7 @@
         <UButton
           color="neutral"
           variant="ghost"
-          to="https://github.com/sonht113/nuxt-boilerplate-for-starter"
+          to="https://github.com/sonht113/nuxt4-boilerplate-for-starter"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"
@@ -32,11 +34,12 @@
 </template>
 <script setup lang="ts">
 // Components
-import ColorModeButton from "../common/ColorModeButton.vue";
 import type { NavigationMenuItem } from "@nuxt/ui";
+import ColorModeButton from "../common/ColorModeButton.vue";
+import ROUTES from "../../../constants/routes";
 
 const route = useRoute();
-const { locale, setLocale, locales } = useI18n();
+const { locale, setLocale, locales, t } = useI18n();
 
 const availableLocales = computed(() =>
   locales.value.filter(({ code }) => code !== locale.value)
@@ -44,22 +47,22 @@ const availableLocales = computed(() =>
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
-    label: "Docs",
-    to: "/docs/getting-started",
-    active: route.path.startsWith("/docs/getting-started"),
+    label: t("header.home"),
+    to: ROUTES.HOME,
+    active: route.path.startsWith(ROUTES.HOME),
   },
   {
-    label: "Components",
-    to: "/docs/components",
-    active: route.path.startsWith("/docs/components"),
+    label: t("header.components"),
+    to: "https://ui.nuxt.com/docs/components",
+    target: "_blank",
   },
   {
-    label: "Figma",
+    label: t("header.figma"),
     to: "https://go.nuxt.com/figma-ui",
     target: "_blank",
   },
   {
-    label: "Releases",
+    label: t("header.releases"),
     to: "https://github.com/sonht113",
     target: "_blank",
   },

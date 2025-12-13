@@ -30,6 +30,7 @@
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.80",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.1.7"

@@ -4,7 +4,7 @@
   useFetch,
   type UseFetchOptions,
 } from "nuxt/app";
-import ROUTES from "../constants/routes.ts";
+import ROUTES from "../constants/routes";
 interface ApiError {
   status: number;
   message: string;
@@ -54,15 +54,21 @@ const handleApiError = (response: any) => {
   }
   return error;
 };
-export function useAPIP<T>(
+export function useAPI<T>(
   url: string | (() => string),
   options?: UseFetchOptions<T>
 ) {
-  return useFetch(url, {
-    ...options,
-    $fetch: useNuxtApp().$api as typeof $fetch,
-    onResponseError({ response }) {
-      handleApiError(response);
-    },
-  });
+  const config = useRuntimeConfig();
+  const apiUrl = config.public.apiUrl as string;
+  
+  return useFetch(
+    apiUrl + (typeof url === "function" ? url() : url),
+    {
+      ...options,
+      $fetch: useNuxtApp().$api as typeof $fetch,
+      onResponseError({ response }) {
+        handleApiError(response);
+      },
+    }
+  );
 }

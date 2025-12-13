@@ -1,7 +1,7 @@
 const ROUTES = {
   LOGIN: "/login",
   NOT_FOUND: "/not-found",
-  HOME: "/",
+  HOME: "/home",
 };
 
 export default ROUTES;

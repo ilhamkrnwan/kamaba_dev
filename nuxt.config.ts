@@ -4,7 +4,29 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  ssr: true,
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || "http://localhost:3000/api",
+    },
+  },
+  // ssr: true,
+  routeRules: {
+    "/": { redirect: "/home" },
+  },
+  alias: {
+    "@": "/",
+    "@components": "./app/components",
+    "@composables": "./composables",
+    "@constants": "./constants",
+    "@stores": "./stores",
+    "@types": "./types",
+    "@utils": "./utils",
+    "@modules": "./modules",
+    "@assets": "./app/assets",
+    "@layouts": "./app/layouts",
+    "@pages": "./app/pages",
+    "@i18n": "./i18n",
+  },
   modules: [
     [
       "@nuxtjs/i18n",

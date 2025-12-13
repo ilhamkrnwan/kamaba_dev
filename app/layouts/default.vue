@@ -1,9 +1,10 @@
 <template>
   <div>
     <LayoutHeader />
-    <main class="pt-[65px]">
-      <p class="text-green-500">Default layout</p>
-      <slot />
+    <main class="min-h-[calc(100vh-129px)] p-4">
+      <div class="w-full lg:w-3/4 lg:mx-auto">
+        <slot />
+      </div>
     </main>
     <LayoutFooter />
   </div>
