@@ -1,4 +1,4 @@
-import ROUTES from "~~/constants/routes";
+import ROUTES from "~/constants/routes";
 
 export default defineNuxtRouteMiddleware(() => {
   const userIsAuthenticated = true; // Replace with real auth check

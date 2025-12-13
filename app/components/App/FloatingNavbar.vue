@@ -2,13 +2,26 @@
   <div class="relative w-full">
     <FloatingNav 
       :nav-items="navItems"
+      :available-locales="availableLocales"
       @login="handleLogin"
-    />
+      @change-locale="handleChangeLocale"
+    >
+      <template #logo>
+        <LayoutLogo />
+      </template>
+    </FloatingNav>
   </div>
 </template>
 
 <script setup lang="ts">
 import FloatingNav from '~/components/ui/FloatingNav.vue'
+import ROUTES from '~/constants/routes'
+
+const { locale, setLocale, locales, t } = useI18n()
+
+const availableLocales = computed(() =>
+  locales.value.filter(({ code }) => code !== locale.value)
+)
 
 const IconHome = defineComponent({
   template: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>'
@@ -22,10 +35,10 @@ const IconMessage = defineComponent({
   template: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
 })
 
-const navItems = [
+const navItems = computed(() => [
   {
-    name: "Home",
-    link: "/home",
+    name: t("header.home"),
+    link: ROUTES.HOME,
     icon: IconHome,
   },
   {
@@ -38,11 +51,14 @@ const navItems = [
     link: "/contact",
     icon: IconMessage,
   },
-]
+])
 
 const handleLogin = () => {
-  // Handle login action
   navigateTo('/login')
+}
+
+const handleChangeLocale = async (localeCode: string) => {
+  await setLocale(localeCode)
 }
 </script>
 

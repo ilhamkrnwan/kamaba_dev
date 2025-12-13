@@ -36,7 +36,7 @@
 // Components
 import type { NavigationMenuItem } from "@nuxt/ui";
 import ColorModeButton from "../common/ColorModeButton.vue";
-import ROUTES from "../../../constants/routes";
+import ROUTES from "../../constants/routes";
 
 const route = useRoute();
 const { locale, setLocale, locales, t } = useI18n();
