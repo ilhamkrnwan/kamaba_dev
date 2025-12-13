@@ -17,6 +17,8 @@
     "@nuxtjs/i18n": "^10.2.1",
     "@tailwindcss/vite": "^4.1.17",
     "@unhead/vue": "^2.0.19",
+    "@vueuse/core": "^14.1.0",
+    "@vueuse/motion": "^3.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eslint": "^9.39.1",
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.80",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.1.7"

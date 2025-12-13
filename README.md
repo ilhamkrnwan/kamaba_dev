@@ -1,75 +1,85 @@
-# Nuxt Minimal Starter
+# KAMABA DEV 🚀
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**KAMABA DEV** adalah komunitas pengembang digital di bawah naungan **KAMABA** yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.
 
-## Setup
+Kami hadir sebagai ruang **belajar, berkolaborasi, dan berkarya** bagi mahasiswa, alumni, dan siapa pun yang tertarik dengan dunia teknologi digital.
 
-Make sure to install dependencies:
+---
 
-```bash
-# npm
-npm install
+## 🌱 Apa itu KAMABA DEV?
 
-# pnpm
-pnpm install
+KAMABA DEV bukan sekadar tim teknis.  
+Kami adalah komunitas yang:
 
-# yarn
-yarn install
+- Mengembangkan **website dan aplikasi**
+- Menciptakan **sistem digital yang bermanfaat**
+- Menjadi jembatan antara **ide dan solusi teknologi**
 
-# bun
-bun install
-```
+Semua dilakukan secara profesional, kolaboratif, dan berkelanjutan.
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## 🎯 Fokus Kegiatan
 
-```bash
-# npm
-npm run dev
+Kami bergerak di beberapa bidang utama:
 
-# pnpm
-pnpm dev
+- 💻 **Pembuatan Website**  
+  Website profil, landing page, sistem informasi, dan lainnya
 
-# yarn
-yarn dev
+- 📱 **Aplikasi Mobile & Web App**  
+  Aplikasi berbasis web maupun mobile sesuai kebutuhan
 
-# bun
-bun run dev
-```
+- 🧠 **Pembelajaran & Pengembangan Skill**  
+  Belajar bareng, diskusi, dan berbagi pengalaman teknologi
 
-## Production
+- 🤝 **Kolaborasi & Proyek Sosial**  
+  Mendukung kegiatan kampus, komunitas, dan UMKM
 
-Build the application for production:
+---
 
-```bash
-# npm
-npm run build
+## 👥 Siapa Saja di Dalamnya?
 
-# pnpm
-pnpm build
+KAMABA DEV terdiri dari:
 
-# yarn
-yarn build
+- Mahasiswa IT  
+- Alumni IT  
+- Kontributor teknologi  
+- Mentor dan praktisi
 
-# bun
-bun run build
-```
+Tidak harus jago sejak awal.  
+Yang penting punya **niat belajar dan semangat berkembang** 🌿
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
+## 🌍 Kenapa KAMABA DEV Ada?
 
-# pnpm
-pnpm preview
+Karena kami percaya bahwa:
 
-# yarn
-yarn preview
+> Teknologi bukan hanya tentang kode,  
+> tapi tentang **dampak dan manfaat nyata**.
 
-# bun
-bun run preview
-```
+Kami ingin teknologi bisa:
+- Membantu organisasi berjalan lebih efisien
+- Mendukung pendidikan
+- Memberikan solusi digital yang tepat guna
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## 📬 Ingin Berkolaborasi?
+
+Kami terbuka untuk:
+- Kerja sama proyek
+- Pengembangan sistem
+- Kegiatan komunitas
+- Diskusi dan sharing teknologi
+
+Silakan hubungi kami melalui website atau media sosial resmi KAMABA DEV.
+
+---
+
+## ✨ Penutup
+
+KAMABA DEV adalah rumah bagi ide, teknologi, dan kolaborasi.  
+Bersama, kita bangun solusi digital yang bermakna.
+
+**KAMABA DEV – Berkarya dengan Teknologi.**

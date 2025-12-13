@@ -68,7 +68,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
 ]);
 
-const handleChangeLocale = async (localeCode: "vi" | "en") => {
+const handleChangeLocale = async (localeCode: "id" | "en") => {
   await setLocale(localeCode);
 };
 </script>

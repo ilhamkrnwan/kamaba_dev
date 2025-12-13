@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       "@nuxtjs/i18n",
       {
         locales: [
-          { code: "vi", file: "vi.ts", iso: "vi-VN", language: "vi" },
+          { code: "id", file: "id.ts", iso: "id-ID", language: "id" },
           { code: "en", file: "en.ts", iso: "en-US", language: "en" },
         ],
         seo: true,
@@ -47,7 +47,17 @@ export default defineNuxtConfig({
     "nuxt-og-image",
     "@nuxt/eslint",
     "@nuxt/ui",
+    '@nuxtjs/google-fonts',
   ],
+  googleFonts: {
+    families: {
+      // Mengambil font Baumans (alternatif Bauhaus)
+      Baumans: true,
+      // Opsional: Font pendamping untuk body text
+      Roboto: true 
+    },
+    display: 'swap' // Performa loading lebih baik
+  },
   css: ["./app/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
