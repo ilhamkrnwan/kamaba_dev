@@ -5,105 +5,46 @@ useSeoMeta({
   title: t('KAMABA DEV - Berkarya dengan Teknologi'),
   description: t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.'),
 })
-
-const heroStats = computed(() => [
-  {
-    value: t('hero.statistik.proyek.nilai'),
-    label: t('hero.statistik.proyek.label'),
-    description: t('hero.statistik.proyek.deskripsi')
-  },
-  {
-    value: t('hero.statistik.anggota.nilai'),
-    label: t('hero.statistik.anggota.label'),
-    description: t('hero.statistik.anggota.deskripsi')
-  },
-  {
-    value: t('hero.statistik.openSource.nilai'),
-    label: t('hero.statistik.openSource.label'),
-    description: t('hero.statistik.openSource.deskripsi')
-  }
-])
-
-const focusAreas = computed(() => [
-  {
-    icon: t('fokusArea.website.icon'),
-    title: t('fokusArea.website.judul'),
-    description: t('fokusArea.website.deskripsi'),
-    tags: t('fokusArea.website.tags')
-  },
-  {
-    icon: t('fokusArea.mobile.icon'),
-    title: t('fokusArea.mobile.judul'),
-    description: t('fokusArea.mobile.deskripsi'),
-    tags: t('fokusArea.mobile.tags')
-  },
-  {
-    icon: t('fokusArea.pembelajaran.icon'),
-    title: t('fokusArea.pembelajaran.judul'),
-    description: t('fokusArea.pembelajaran.deskripsi'),
-    tags: t('fokusArea.pembelajaran.tags')
-  },
-  {
-    icon: t('fokusArea.kolaborasi.icon'),
-    title: t('fokusArea.kolaborasi.judul'),
-    description: t('fokusArea.kolaborasi.deskripsi'),
-    tags: t('fokusArea.kolaborasi.tags')
-  }
-])
-
-const bentoItems = computed(() => [
-  {
-    title: t('mengapa.modern.judul'),
-    description: t('mengapa.modern.deskripsi'),
-    icon: t('mengapa.modern.icon'),
-    size: 'large' as const,
-  },
-  {
-    title: t('mengapa.openSource.judul'),
-    description: t('mengapa.openSource.deskripsi'),
-    icon: t('mengapa.openSource.icon'),
-  },
-  {
-    title: t('mengapa.profesional.judul'),
-    description: t('mengapa.profesional.deskripsi'),
-    icon: t('mengapa.profesional.icon'),
-  },
-  {
-    title: t('mengapa.kolaboratif.judul'),
-    description: t('mengapa.kolaboratif.deskripsi'),
-    icon: t('mengapa.kolaboratif.icon'),
-  },
-  {
-    title: t('mengapa.berkelanjutan.judul'),
-    description: t('mengapa.berkelanjutan.deskripsi'),
-    icon: t('mengapa.berkelanjutan.icon'),
-    size: 'wide' as const,
-  }
-])
-
 </script>
 
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
     <UiHeroSection
-      :title="$t('hero.judul')"
-      :subtitle="$t('hero.subjudul')"
-      :badge="$t('hero.lencana')"
-      :primary-button="$t('hero.tombolUtama')"
-      :secondary-button="$t('hero.tombolKedua')"
-      :stats="heroStats"
-      @primary-action="navigateTo('/#contact')"
-      @secondary-action="navigateTo('/#about')"
+      :title="$t('KAMABA DEV')"
+      :subtitle="$t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.')"
+      :badge="$t('Terbuka untuk pekerjaan')"
+      :primary-button="$t('Portofolio')"
+      :secondary-button="$t('Mari Berkolaborasi!')"
+      :stats="[
+        {
+          value: $t('20+'),
+          label: $t('Proyek'),
+          description: $t('Proyek yang telah diselesaikan')
+        },
+        {
+          value: $t('50+'),
+          label: $t('Anggota'),
+          description: $t('Anggota aktif komunitas')
+        },
+        {
+          value: $t('100%'),
+          label: $t('Open Source'),
+          description: $t('Semua proyek open source')
+        }
+      ]"
+      @primary-action="navigateTo('/portfolio')"
+      @secondary-action="navigateTo('/#contact')"
+      class="font-['Baumans']"
     />
 
     <!-- What is KAMABA DEV Section -->
     <section class="relative overflow-hidden py-20 md:py-32" id="about">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          :title="$t('tentang.judul')"
-          :subtitle="$t('tentang.subjudul')"
-          :badge="$t('tentang.lencana')"
+          :title="$t('Tentang KAMABA DEV')"
+          :subtitle="$t('Kami adalah komunitas pengembang digital yang berkomitmen untuk menciptakan solusi teknologi inovatif dan berkelanjutan bagi pendidikan, organisasi, dan masyarakat luas.')"
+          :badge="$t('Siapa Kami')"
           size="md"
           :gradient="true"
         />
@@ -112,10 +53,10 @@ const bentoItems = computed(() => [
           <div class="rounded-2xl border border-border bg-card/50 p-8 backdrop-blur-sm md:p-12">
             <div class="space-y-6 text-center">
               <p class="text-lg text-muted-foreground leading-relaxed md:text-xl">
-                {{ $t('tentang.deskripsi1') }} <span class="font-semibold text-primary">{{ $t('tentang.deskripsi1Tebal') }}</span> {{ $t('tentang.deskripsi1Setelah') }}
+                {{ $t('KAMABA DEV dimulai dari') }} <span class="font-semibold text-primary">{{ $t('visi sederhana') }}</span> {{ $t(': menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat.') }}
               </p>
               <p class="text-lg text-muted-foreground leading-relaxed">
-                {{ $t('tentang.deskripsi2') }} <span class="font-semibold text-foreground">{{ $t('tentang.deskripsi2Tebal') }}</span>{{ $t('tentang.deskripsi2Setelah') }}
+                {{ $t('Kami percaya bahwa') }} <span class="font-semibold text-foreground">{{ $t('teknologi harus mudah diakses, transparan, dan memberdayakan') }}</span>{{ $t(', bukan memperumit.') }}
               </p>
             </div>
           </div>
@@ -127,21 +68,37 @@ const bentoItems = computed(() => [
     <section class="py-20 md:py-32">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          :title="$t('fokusArea.judul')"
-          :subtitle="$t('fokusArea.subjudul')"
-          :badge="$t('fokusArea.lencana')"
+          :title="$t('Area Fokus Kami')"
+          :subtitle="$t('Kami mengkhususkan diri dalam berbagai bidang teknologi untuk memberikan solusi terbaik')"
+          :badge="$t('Keahlian')"
           size="md"
           :show-line="true"
         />
 
         <UiBentoGrid :columns="2" class="mx-auto max-w-6xl">
           <UiFeatureCard
-            v-for="(area, idx) in focusAreas"
-            :key="idx"
-            :icon="area.icon"
-            :title="area.title"
-            :description="area.description"
-            :tags="area.tags"
+            :icon="$t('i-heroicons-globe-alt')"
+            :title="$t('Website Development')"
+            :description="$t('Membangun website modern, responsif, dan user-friendly untuk berbagai kebutuhan bisnis dan organisasi.')"
+            :tags="$t('Vue.js, Nuxt, React, Next.js')"
+          />
+          <UiFeatureCard
+            :icon="$t('i-heroicons-device-phone-mobile')"
+            :title="$t('Mobile Development')"
+            :description="$t('Mengembangkan aplikasi mobile native dan cross-platform yang powerful dan intuitif.')"
+            :tags="$t('React Native, Flutter, Ionic')"
+          />
+          <UiFeatureCard
+            :icon="$t('i-heroicons-academic-cap')"
+            :title="$t('E-Learning Solutions')"
+            :description="$t('Platform pembelajaran digital yang interaktif untuk meningkatkan pengalaman belajar mengajar.')"
+            :tags="$t('LMS, Interactive Content, Gamification')"
+          />
+          <UiFeatureCard
+            :icon="$t('i-heroicons-users')"
+            :title="$t('Collaborative Tools')"
+            :description="$t('Sistem manajemen dan kolaborasi untuk meningkatkan produktivitas tim dan organisasi.')"
+            :tags="$t('Project Management, Communication, Automation')"
           />
         </UiBentoGrid>
       </div>
@@ -157,8 +114,8 @@ const bentoItems = computed(() => [
 
       <div class="container relative mx-auto px-4">
         <UiSectionHeading
-          :title="$t('mengapa.judul')"
-          :badge="$t('mengapa.lencana')"
+          :title="$t('Mengapa Memilih KAMABA DEV?')"
+          :badge="$t('Keunggulan Kami')"
           size="md"
         />
 
@@ -166,19 +123,38 @@ const bentoItems = computed(() => [
           <div class="mb-12 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-blue-500/5 p-8 md:p-12">
             <blockquote class="text-center">
               <p class="mb-4 text-2xl font-semibold italic text-foreground md:text-3xl">
-                "{{ $t('mengapa.kutipan') }}"
+                "{{ $t('Teknologi terbaik adalah yang membuat hidup lebih mudah, bukan lebih rumit.') }}"
               </p>
             </blockquote>
           </div>
 
           <UiBentoGrid :columns="3">
             <UiBentoCard
-              v-for="(item, idx) in bentoItems"
-              :key="idx"
-              :title="item.title"
-              :description="item.description"
-              :icon="item.icon"
-              :size="item.size"
+              :title="$t('Modern & Up-to-date')"
+              :description="$t('Menggunakan teknologi terkini dan best practices dalam setiap proyek yang kami kerjakan.')"
+              :icon="$t('i-heroicons-sparkles')"
+              size="large"
+            />
+            <UiBentoCard
+              :title="$t('Open Source')"
+              :description="$t('Komitmen pada transparansi dan berbagi pengetahuan melalui kontribusi open source.')"
+              :icon="$t('i-heroicons-code-bracket')"
+            />
+            <UiBentoCard
+              :title="$t('Professional')"
+              :description="$t('Standar profesional tinggi dengan dokumentasi lengkap dan kode berkualitas.')"
+              :icon="$t('i-heroicons-star')"
+            />
+            <UiBentoCard
+              :title="$t('Kolaboratif')"
+              :description="$t('Membangun dengan semangat kerja sama dan saling mendukung antar anggota.')"
+              :icon="$t('i-heroicons-hand-raised')"
+            />
+            <UiBentoCard
+              :title="$t('Berkelanjutan')"
+              :description="$t('Fokus pada solusi jangka panjang yang scalable dan mudah dimaintain.')"
+              :icon="$t('i-heroicons-arrow-trending-up')"
+              size="wide"
             />
           </UiBentoGrid>
         </div>
@@ -189,42 +165,42 @@ const bentoItems = computed(() => [
     <section class="py-20 md:py-32">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          :title="$t('komunitas.judul')"
-          :subtitle="$t('komunitas.subjudul')"
-          :badge="$t('komunitas.lencana')"
+          :title="$t('Siapa Saja yang Ada di KAMABA DEV?')"
+          :subtitle="$t('Komunitas kami terdiri dari berbagai latar belakang yang bekerja sama untuk tujuan yang sama')"
+          :badge="$t('Komunitas')"
           size="md"
         />
 
         <div class="mx-auto max-w-4xl">
           <div class="grid gap-6 md:grid-cols-2">
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('komunitas.mahasiswa.icon')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.mahasiswa.judul') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('komunitas.mahasiswa.deskripsi') }}</p>
+              <UIcon :name="$t('i-heroicons-academic-cap')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Mahasiswa Aktif') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('Mahasiswa yang ingin belajar dan mengembangkan skill teknologi sambil berkontribusi pada proyek nyata.') }}</p>
             </div>
 
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('komunitas.alumni.icon')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.alumni.judul') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('komunitas.alumni.deskripsi') }}</p>
+              <UIcon :name="$t('i-heroicons-briefcase')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Alumni Profesional') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('Alumni yang sudah bekerja di industri dan ingin berbagi pengalaman serta membimbing generasi selanjutnya.') }}</p>
             </div>
 
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('komunitas.kontributor.icon')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.kontributor.judul') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('komunitas.kontributor.deskripsi') }}</p>
+              <UIcon :name="$t('i-heroicons-heart')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Kontributor Open Source') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('Developer yang passionate tentang open source dan ingin berkontribusi pada proyek-proyek bermakna.') }}</p>
             </div>
 
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('komunitas.mentor.icon')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.mentor.judul') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('komunitas.mentor.deskripsi') }}</p>
+              <UIcon :name="$t('i-heroicons-light-bulb')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Mentor & Advisor') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('Profesional berpengalaman yang memberikan bimbingan dan arahan strategis untuk perkembangan komunitas.') }}</p>
             </div>
           </div>
 
           <div class="mt-12 rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-transparent p-8 text-center">
             <p class="text-lg text-foreground">
-              {{ $t('komunitas.footer') }} <span class="font-semibold text-primary">{{ $t('komunitas.footerTebal') }}</span> <UIcon :name="$t('komunitas.footerIcon')" class="inline-block ml-1" />
+              {{ $t('Bersama-sama, kita membangun') }} <span class="font-semibold text-primary">{{ $t('masa depan teknologi yang lebih baik') }}</span> <UIcon :name="$t('i-heroicons-heart')" class="inline-block ml-1" />
             </p>
           </div>
         </div>
@@ -244,10 +220,10 @@ const bentoItems = computed(() => [
 
             <div class="relative">
               <h2 class="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-                {{ $t('cta.judul') }}
+                {{ $t('Siap Berkolaborasi?') }}
               </h2>
               <p class="mb-8 text-lg text-muted-foreground">
-                {{ $t('cta.deskripsi') }}
+                {{ $t('Mari bergabung dengan kami dan ciptakan solusi teknologi yang bermakna bersama-sama.') }}
               </p>
 
               <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -256,14 +232,14 @@ const bentoItems = computed(() => [
                   color="primary"
                   @click="navigateTo('/#contact')"
                 >
-                  {{ $t('cta.tombolUtama') }}
+                  {{ $t('Hubungi Kami') }}
                 </UButton>
                 <UButton
                   size="xl"
                   variant="outline"
                   to="/about"
                 >
-                  {{ $t('cta.tombolKedua') }}
+                  {{ $t('Pelajari Lebih Lanjut') }}
                 </UButton>
               </div>
             </div>

@@ -11,6 +11,11 @@ const formatDate = (date: string) => {
     month: 'long' 
   })
 }
+
+// Query portfolios from content by locale
+const { data: portofolios } = await useAsyncData('portfolios', () => 
+  queryContent('portofolio', locale.value).sort({ date: -1 }).find()
+)
 </script>
 
 <template>
@@ -18,10 +23,10 @@ const formatDate = (date: string) => {
     <UContainer class="py-12 sm:py-20">
       <div class="mb-12 text-center">
         <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          {{ $t('portofolio.judul') }}
+          {{ t('Portofolio Kami') }}
         </h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          {{ $t('portofolio.subjudul') }}
+          {{ t('Kumpulan proyek dan karya yang telah kami kerjakan untuk berbagai klien dan organisasi') }}
         </p>
       </div>
 
@@ -92,7 +97,7 @@ const formatDate = (date: string) => {
                 trailing-icon="i-lucide-arrow-right"
                 @click.stop="$router.push(item._path)"
               >
-                {{ $t('portofolio.lihatDetail') }}
+                {{ t('Lihat Detail') }}
               </UButton>
             </div>
           </template>
@@ -102,7 +107,7 @@ const formatDate = (date: string) => {
       <div v-else class="text-center py-20">
         <UIcon name="i-lucide-folder-open" class="w-16 h-16 text-gray-400 mx-auto mb-4" />
         <p class="text-gray-600 dark:text-gray-400">
-          {{ $t('portofolio.kosong') }}
+          {{ t('Belum ada portofolio yang tersedia') }}
         </p>
       </div>
     </UContainer>

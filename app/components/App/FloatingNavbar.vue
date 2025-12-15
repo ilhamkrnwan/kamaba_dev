@@ -15,13 +15,13 @@ const navItems = computed(() => [
   },
   {
     name: "Portofolio",
-    link: "/portfolio",
+    link: "/portofolio",
     icon: "lucide-folder-open",
   }
 ])
 
 const handleChangeLocale = async (localeCode: string) => {
-  await setLocale(localeCode)
+  await setLocale(localeCode as "id" | "en")
 }
 </script>
 
