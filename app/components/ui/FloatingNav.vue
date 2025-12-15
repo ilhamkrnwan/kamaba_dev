@@ -1,70 +1,6 @@
-<template>
-  <Transition name="floating-nav">
-    <div
-      v-if="visible"
-      :class="cn(
-        'flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-4 py-2 items-center justify-center space-x-3',
-        className
-      )"
-    >
-      <!-- Logo -->
-      <div class="flex items-center">
-        <slot name="logo" />
-      </div>
-
-      <!-- Divider -->
-      <div class="h-6 w-px bg-neutral-200 dark:bg-neutral-700" />
-      
-      <!-- Nav Items -->
-      <NuxtLink
-        v-for="(navItem, idx) in navItems"
-        :key="`link-${idx}`"
-        :to="navItem.link"
-        :class="cn(
-          'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500'
-        )"
-      >
-        <span class="block sm:hidden">
-          <component :is="navItem.icon" v-if="navItem.icon" />
-        </span>
-        <span class="hidden sm:block text-sm">{{ navItem.name }}</span>
-      </NuxtLink>
-
-      <!-- Divider -->
-      <div class="h-6 w-px bg-neutral-200 dark:bg-neutral-700" />
-      
-      <!-- Theme Button -->
-      <ColorModeButton />
-
-      <!-- Language Buttons -->
-      <button
-        v-for="locale in availableLocales"
-        :key="locale.code"
-        class="text-xs font-medium px-3 py-1 rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-        @click="$emit('changeLocale', locale.code)"
-      >
-        {{ locale.code.toUpperCase() }}
-      </button>
-
-      <!-- Divider -->
-      <div class="h-6 w-px bg-neutral-200 dark:bg-neutral-700" />
-      
-      <!-- Login Button -->
-      <button 
-        class="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
-        @click="onLoginClick"
-      >
-        <span>Login</span>
-        <span class="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
-      </button>
-    </div>
-  </Transition>
-</template>
-
 <script setup lang="ts">
-import { ref } from 'vue'
-import { cn } from '../../utils/cn'
-import ColorModeButton from '../common/ColorModeButton.vue'
+const mobileMenuOpen = ref(false)
+import GlowingEffect from '~/components/ui/GlowingEffect.vue'
 
 export interface NavItem {
   name: string
@@ -80,37 +16,160 @@ export interface LocaleItem {
 interface Props {
   navItems: NavItem[]
   availableLocales: LocaleItem[]
-  className?: string
-  alwaysVisible?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  className: '',
-  alwaysVisible: true
-})
+defineProps<Props>()
 
 const emit = defineEmits<{
   login: []
   changeLocale: [localeCode: string]
 }>()
 
-// Always visible by default
-const visible = ref(true)
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
+
+const closeMobileMenu = () => {
+  mobileMenuOpen.value = false
+}
 
 const onLoginClick = () => {
+  closeMobileMenu()
   emit('login')
 }
 </script>
 
+<template>
+  <div class="fixed top-0 inset-x-0 z-[5000] px-4 pt-4">
+    <div class="hidden md:block max-w-3xl mx-auto">
+      <GlowingEffect class="flex flex-row items-center justify-between rounded-full border border-transparent dark:border-white/[0.2] dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] px-6 py-3">
+        <div class="flex items-center">
+          <slot name="logo" />
+        </div>
+
+        <div class="flex items-center gap-1 max-w-3xl">
+        <NuxtLink
+          v-for="(navItem, idx) in navItems"
+          :key="`link-${idx}`"
+          :to="navItem.link"
+          class="relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 px-4 py-2 rounded-full hover:bg-neutral-100/80 dark:hover:bg-neutral-800/80 transition-all duration-200"
+        >
+          <UIcon v-if="navItem.icon" :name="navItem.icon" class="w-4 h-4" />
+          <span class="text-sm cursor-pointer">{{ navItem.name }}</span>
+        </NuxtLink>
+
+        <UDivider orientation="vertical" class="mx-2" />
+
+        <UColorModeButton />
+
+        <UDivider orientation="vertical" class="mx-2" />
+
+        <UButtonGroup size="xs" orientation="horizontal">
+          <UButton
+            v-for="locale in availableLocales"
+            :key="locale.code"
+            variant="outline"
+            :label="locale.code.toUpperCase()"
+            @click="$emit('changeLocale', locale.code)"
+          />
+        </UButtonGroup>
+
+        <UDivider orientation="vertical" class="mx-2" />
+
+        <UButton
+          variant="outline"
+          size="sm"
+          label="Login"
+          @click="onLoginClick"
+        />
+        </div>
+      </GlowingEffect>
+    </div>
+
+    <div class="md:hidden max-w-7xl mx-auto">
+      <GlowingEffect class="flex items-center justify-between px-4 py-3 mx-auto rounded-full border border-transparent dark:border-white/[0.2] dark:bg-black bg-white shadow-lg">
+        <div class="flex items-center">
+          <slot name="logo" />
+        </div>
+
+        <UButton
+          :icon="mobileMenuOpen ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3'"
+          variant="ghost"
+          size="lg"
+          square
+          @click="toggleMobileMenu"
+          aria-label="Toggle menu"
+        />
+      </GlowingEffect>
+
+      <Transition name="mobile-menu">
+        <div
+          v-if="mobileMenuOpen"
+          v-motion
+          :initial="{ opacity: 0, y: -20 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 300, ease: 'easeOut' } }"
+          :leave="{ opacity: 0, y: -20, transition: { duration: 200, ease: 'easeIn' } }"
+          class="mt-3"
+        >
+          <GlowingEffect class="rounded-3xl border border-transparent dark:border-white/[0.2] dark:bg-black bg-white shadow-xl overflow-hidden">
+          <div class="flex flex-col p-4 space-y-1">
+            <NuxtLink
+              v-for="(navItem, idx) in navItems"
+              :key="`mobile-link-${idx}`"
+              :to="navItem.link"
+              @click="closeMobileMenu"
+              class="relative dark:text-neutral-50 text-neutral-700 px-4 py-3 rounded-xl hover:bg-neutral-100/80 dark:hover:bg-neutral-800/80 transition-all duration-200 font-medium"
+            >
+              {{ navItem.name }}
+            </NuxtLink>
+
+            <UDivider class="my-2" />
+
+            <div class="flex flex-col space-y-3 px-4 py-2">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">Theme</span>
+                <UColorModeButton />
+              </div>
+
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">Language</span>
+                <UButtonGroup size="xs" orientation="horizontal">
+                  <UButton
+                    v-for="locale in availableLocales"
+                    :key="locale.code"
+                    variant="outline"
+                    :label="locale.code.toUpperCase()"
+                    @click="$emit('changeLocale', locale.code)"
+                  />
+                </UButtonGroup>
+              </div>
+            </div>
+
+            <UDivider class="my-2" />
+
+            <UButton
+              block
+              variant="outline"
+              label="Login"
+              @click="onLoginClick"
+            />
+          </div>
+          </GlowingEffect>
+        </div>
+      </Transition>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-.floating-nav-enter-active,
-.floating-nav-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.mobile-menu-enter-active,
+.mobile-menu-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.floating-nav-enter-from,
-.floating-nav-leave-to {
+.mobile-menu-enter-from,
+.mobile-menu-leave-to {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-10px);
 }
 </style>

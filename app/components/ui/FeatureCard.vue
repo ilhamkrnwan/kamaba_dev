@@ -16,7 +16,7 @@
     <div
       class="relative mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground"
     >
-      <component :is="icon" v-if="icon" class="h-6 w-6" />
+      <UIcon v-if="icon" :name="icon" class="h-6 w-6" />
       <span v-else class="text-2xl">{{ emoji }}</span>
     </div>
 
@@ -31,9 +31,9 @@
       </p>
 
       <!-- Tags or additional info -->
-      <div v-if="tags && tags.length > 0" class="flex flex-wrap gap-2">
+      <div v-if="tagsArray && tagsArray.length > 0" class="flex flex-wrap gap-2">
         <span
-          v-for="(tag, idx) in tags"
+          v-for="(tag, idx) in tagsArray"
           :key="idx"
           class="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
         >
@@ -74,18 +74,27 @@
 import { cn } from '../../utils/cn'
 
 interface Props {
-  icon?: any
+  icon?: string
   emoji?: string
   title: string
   description: string
-  tags?: string[]
+  tags?: string | string[]
   link?: string
   linkText?: string
   className?: string
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   linkText: 'Pelajari lebih lanjut',
   className: ''
+})
+
+// Convert tags to array if it's a string
+const tagsArray = computed(() => {
+  if (!props.tags) return []
+  if (typeof props.tags === 'string') {
+    return props.tags.split(',').map(tag => tag.trim())
+  }
+  return props.tags
 })
 </script>

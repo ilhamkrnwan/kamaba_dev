@@ -28,7 +28,7 @@
         <div
           class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground"
         >
-          <component :is="icon" v-if="icon" class="h-6 w-6" />
+          <UIcon v-if="icon" :name="icon" class="h-6 w-6" />
           <span v-else-if="emoji" class="text-2xl">{{ emoji }}</span>
         </div>
       </div>
@@ -111,7 +111,7 @@ import { cn } from '../../utils/cn'
 interface Props {
   title: string
   description: string
-  icon?: any
+  icon?: string
   emoji?: string
   image?: string
   pattern?: string

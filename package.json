@@ -19,6 +19,7 @@
     "@unhead/vue": "^2.0.19",
     "@vueuse/core": "^14.1.0",
     "@vueuse/motion": "^3.0.3",
+    "better-sqlite3": "^12.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eslint": "^9.39.1",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.80",
+    "@nuxt/content": "^3.9.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3",

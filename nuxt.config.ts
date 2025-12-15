@@ -9,7 +9,6 @@ export default defineNuxtConfig({
       apiUrl: process.env.NUXT_PUBLIC_API_URL || "http://localhost:3000/api",
     },
   },
-  // ssr: true,
   routeRules: {
     "/": { redirect: "/home" },
   },
@@ -32,13 +31,13 @@ export default defineNuxtConfig({
       "@nuxtjs/i18n",
       {
         locales: [
-          { code: "id", file: "id.ts", iso: "id-ID", language: "id" },
-          { code: "en", file: "en.ts", iso: "en-US", language: "en" },
+          { code: "id", file: "id.json", iso: "id-ID", language: "id" },
+          { code: "en", file: "en.json", iso: "en-US", language: "en" },
         ],
         seo: true,
         lazy: true,
-        langDir: "locales/",
-        defaultLocale: "en",
+        langDir: "languages/",
+        defaultLocale: "id",
         strategy: "no_prefix",
         baseUrl: process.env.BASE_URL,
       },
@@ -47,16 +46,16 @@ export default defineNuxtConfig({
     "nuxt-og-image",
     "@nuxt/eslint",
     "@nuxt/ui",
+    "@nuxt/content",
     '@nuxtjs/google-fonts',
+    '@vueuse/motion/nuxt',
   ],
   googleFonts: {
     families: {
-      // Mengambil font Baumans (alternatif Bauhaus)
       Baumans: true,
-      // Opsional: Font pendamping untuk body text
       Roboto: true 
     },
-    display: 'swap' // Performa loading lebih baik
+    display: 'swap' 
   },
   css: ["./app/assets/css/main.css"],
   vite: {

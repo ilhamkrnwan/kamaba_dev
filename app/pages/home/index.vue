@@ -1,117 +1,109 @@
 <script lang="ts" setup>
-definePageMeta({
-  layout: "default",
-  title: "KAMABA DEV - Berkarya dengan Teknologi",
-  description: "Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.",
-});
+const { t } = useI18n()
 
-const router = useRouter()
+useSeoMeta({
+  title: t('KAMABA DEV - Berkarya dengan Teknologi'),
+  description: t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.'),
+})
 
-const heroStats = [
+const heroStats = computed(() => [
   {
-    value: '10+',
-    label: 'Proyek Selesai',
-    description: 'Website dan aplikasi yang telah kami kembangkan'
+    value: t('hero.statistik.proyek.nilai'),
+    label: t('hero.statistik.proyek.label'),
+    description: t('hero.statistik.proyek.deskripsi')
   },
   {
-    value: '50+',
-    label: 'Anggota Aktif',
-    description: 'Developer dan kontributor yang berkolaborasi'
+    value: t('hero.statistik.anggota.nilai'),
+    label: t('hero.statistik.anggota.label'),
+    description: t('hero.statistik.anggota.deskripsi')
   },
   {
-    value: '100%',
-    label: 'Open Source',
-    description: 'Komitmen kami pada pembelajaran terbuka'
+    value: t('hero.statistik.openSource.nilai'),
+    label: t('hero.statistik.openSource.label'),
+    description: t('hero.statistik.openSource.deskripsi')
   }
-]
+])
 
-const focusAreas = [
+const focusAreas = computed(() => [
   {
-    emoji: '💻',
-    title: 'Pembuatan Website',
-    description: 'Website profil, landing page, sistem informasi, dan berbagai solusi web sesuai kebutuhan organisasi dan UMKM.',
-    tags: ['Web Development', 'UI/UX', 'Responsive Design']
+    icon: t('fokusArea.website.icon'),
+    title: t('fokusArea.website.judul'),
+    description: t('fokusArea.website.deskripsi'),
+    tags: t('fokusArea.website.tags')
   },
   {
-    emoji: '📱',
-    title: 'Aplikasi Mobile & Web App',
-    description: 'Aplikasi berbasis web maupun mobile yang modern, efisien, dan user-friendly untuk berbagai kebutuhan.',
-    tags: ['Mobile App', 'Progressive Web App', 'Cross Platform']
+    icon: t('fokusArea.mobile.icon'),
+    title: t('fokusArea.mobile.judul'),
+    description: t('fokusArea.mobile.deskripsi'),
+    tags: t('fokusArea.mobile.tags')
   },
   {
-    emoji: '🧠',
-    title: 'Pembelajaran & Pengembangan Skill',
-    description: 'Belajar bareng, diskusi teknologi, workshop, dan berbagi pengalaman untuk meningkatkan kemampuan developer.',
-    tags: ['Learning', 'Workshop', 'Mentoring']
+    icon: t('fokusArea.pembelajaran.icon'),
+    title: t('fokusArea.pembelajaran.judul'),
+    description: t('fokusArea.pembelajaran.deskripsi'),
+    tags: t('fokusArea.pembelajaran.tags')
   },
   {
-    emoji: '🤝',
-    title: 'Kolaborasi & Proyek Sosial',
-    description: 'Mendukung kegiatan kampus, komunitas, dan UMKM melalui solusi teknologi yang bermanfaat.',
-    tags: ['Social Impact', 'Community', 'Collaboration']
+    icon: t('fokusArea.kolaborasi.icon'),
+    title: t('fokusArea.kolaborasi.judul'),
+    description: t('fokusArea.kolaborasi.deskripsi'),
+    tags: t('fokusArea.kolaborasi.tags')
   }
-]
+])
 
-const bentoItems = [
+const bentoItems = computed(() => [
   {
-    title: 'Teknologi Modern',
-    description: 'Menggunakan tech stack terkini seperti Nuxt, Vue, TypeScript, dan berbagai framework modern lainnya.',
-    emoji: '⚡',
+    title: t('mengapa.modern.judul'),
+    description: t('mengapa.modern.deskripsi'),
+    icon: t('mengapa.modern.icon'),
     size: 'large' as const,
   },
   {
-    title: 'Open Source',
-    description: 'Komitmen pada pembelajaran terbuka dan berbagi pengetahuan.',
-    emoji: '🌍',
+    title: t('mengapa.openSource.judul'),
+    description: t('mengapa.openSource.deskripsi'),
+    icon: t('mengapa.openSource.icon'),
   },
   {
-    title: 'Profesional',
-    description: 'Kualitas kerja yang tinggi dengan pendekatan yang terstruktur.',
-    emoji: '🎯',
+    title: t('mengapa.profesional.judul'),
+    description: t('mengapa.profesional.deskripsi'),
+    icon: t('mengapa.profesional.icon'),
   },
   {
-    title: 'Kolaboratif',
-    description: 'Kerja sama tim yang solid dan saling mendukung.',
-    emoji: '👥',
+    title: t('mengapa.kolaboratif.judul'),
+    description: t('mengapa.kolaboratif.deskripsi'),
+    icon: t('mengapa.kolaboratif.icon'),
   },
   {
-    title: 'Berkelanjutan',
-    description: 'Pengembangan yang kontinyu dan maintenance jangka panjang.',
-    emoji: '♻️',
+    title: t('mengapa.berkelanjutan.judul'),
+    description: t('mengapa.berkelanjutan.deskripsi'),
+    icon: t('mengapa.berkelanjutan.icon'),
     size: 'wide' as const,
   }
-]
+])
 
-const navigateToContact = () => {
-  router.push('/contact')
-}
-
-const navigateToAbout = () => {
-  router.push('/about')
-}
 </script>
 
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
     <UiHeroSection
-      title="KAMABA DEV"
-      subtitle="Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern. Belajar, berkolaborasi, dan berkarya untuk menciptakan solusi digital yang bermakna."
-      badge="🚀 Sedang Berkembang"
-      primary-button="Mulai Berkolaborasi"
-      secondary-button="Pelajari Lebih Lanjut"
+      :title="$t('hero.judul')"
+      :subtitle="$t('hero.subjudul')"
+      :badge="$t('hero.lencana')"
+      :primary-button="$t('hero.tombolUtama')"
+      :secondary-button="$t('hero.tombolKedua')"
       :stats="heroStats"
-      @primary-action="navigateToContact"
-      @secondary-action="navigateToAbout"
+      @primary-action="navigateTo('/#contact')"
+      @secondary-action="navigateTo('/#about')"
     />
 
     <!-- What is KAMABA DEV Section -->
-    <section class="relative overflow-hidden py-20 md:py-32">
+    <section class="relative overflow-hidden py-20 md:py-32" id="about">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          title="Apa itu KAMABA DEV?"
-          subtitle="KAMABA DEV bukan sekadar tim teknis. Kami adalah komunitas yang mengembangkan website dan aplikasi, menciptakan sistem digital yang bermanfaat, dan menjadi jembatan antara ide dan solusi teknologi."
-          badge="🌱 Tentang Kami"
+          :title="$t('tentang.judul')"
+          :subtitle="$t('tentang.subjudul')"
+          :badge="$t('tentang.lencana')"
           size="md"
           :gradient="true"
         />
@@ -120,10 +112,10 @@ const navigateToAbout = () => {
           <div class="rounded-2xl border border-border bg-card/50 p-8 backdrop-blur-sm md:p-12">
             <div class="space-y-6 text-center">
               <p class="text-lg text-muted-foreground leading-relaxed md:text-xl">
-                Kami hadir sebagai ruang <span class="font-semibold text-primary">belajar, berkolaborasi, dan berkarya</span> bagi mahasiswa, alumni, dan siapa pun yang tertarik dengan dunia teknologi digital.
+                {{ $t('tentang.deskripsi1') }} <span class="font-semibold text-primary">{{ $t('tentang.deskripsi1Tebal') }}</span> {{ $t('tentang.deskripsi1Setelah') }}
               </p>
               <p class="text-lg text-muted-foreground leading-relaxed">
-                Semua dilakukan secara <span class="font-semibold text-foreground">profesional, kolaboratif, dan berkelanjutan</span>.
+                {{ $t('tentang.deskripsi2') }} <span class="font-semibold text-foreground">{{ $t('tentang.deskripsi2Tebal') }}</span>{{ $t('tentang.deskripsi2Setelah') }}
               </p>
             </div>
           </div>
@@ -135,9 +127,9 @@ const navigateToAbout = () => {
     <section class="py-20 md:py-32">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          title="Fokus Kegiatan"
-          subtitle="Kami bergerak di beberapa bidang utama untuk memberikan dampak nyata"
-          badge="🎯 Yang Kami Lakukan"
+          :title="$t('fokusArea.judul')"
+          :subtitle="$t('fokusArea.subjudul')"
+          :badge="$t('fokusArea.lencana')"
           size="md"
           :show-line="true"
         />
@@ -146,7 +138,7 @@ const navigateToAbout = () => {
           <UiFeatureCard
             v-for="(area, idx) in focusAreas"
             :key="idx"
-            :emoji="area.emoji"
+            :icon="area.icon"
             :title="area.title"
             :description="area.description"
             :tags="area.tags"
@@ -165,8 +157,8 @@ const navigateToAbout = () => {
 
       <div class="container relative mx-auto px-4">
         <UiSectionHeading
-          title="Kenapa KAMABA DEV Ada?"
-          badge="💡 Filosofi Kami"
+          :title="$t('mengapa.judul')"
+          :badge="$t('mengapa.lencana')"
           size="md"
         />
 
@@ -174,7 +166,7 @@ const navigateToAbout = () => {
           <div class="mb-12 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-blue-500/5 p-8 md:p-12">
             <blockquote class="text-center">
               <p class="mb-4 text-2xl font-semibold italic text-foreground md:text-3xl">
-                "Teknologi bukan hanya tentang kode, tapi tentang dampak dan manfaat nyata."
+                "{{ $t('mengapa.kutipan') }}"
               </p>
             </blockquote>
           </div>
@@ -185,7 +177,7 @@ const navigateToAbout = () => {
               :key="idx"
               :title="item.title"
               :description="item.description"
-              :emoji="item.emoji"
+              :icon="item.icon"
               :size="item.size"
             />
           </UiBentoGrid>
@@ -197,42 +189,42 @@ const navigateToAbout = () => {
     <section class="py-20 md:py-32">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          title="Siapa Saja di Dalamnya?"
-          subtitle="KAMABA DEV terdiri dari berbagai individu yang passionate tentang teknologi"
-          badge="👥 Komunitas"
+          :title="$t('komunitas.judul')"
+          :subtitle="$t('komunitas.subjudul')"
+          :badge="$t('komunitas.lencana')"
           size="md"
         />
 
         <div class="mx-auto max-w-4xl">
           <div class="grid gap-6 md:grid-cols-2">
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div class="mb-3 text-3xl">🎓</div>
-              <h3 class="mb-2 text-xl font-semibold text-foreground">Mahasiswa IT</h3>
-              <p class="text-sm text-muted-foreground">Mahasiswa yang ingin belajar dan mengembangkan skill programming</p>
+              <UIcon :name="$t('komunitas.mahasiswa.icon')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.mahasiswa.judul') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('komunitas.mahasiswa.deskripsi') }}</p>
             </div>
 
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div class="mb-3 text-3xl">🎖️</div>
-              <h3 class="mb-2 text-xl font-semibold text-foreground">Alumni IT</h3>
-              <p class="text-sm text-muted-foreground">Alumni yang ingin berbagi pengalaman dan berkontribusi</p>
+              <UIcon :name="$t('komunitas.alumni.icon')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.alumni.judul') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('komunitas.alumni.deskripsi') }}</p>
             </div>
 
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div class="mb-3 text-3xl">💼</div>
-              <h3 class="mb-2 text-xl font-semibold text-foreground">Kontributor Teknologi</h3>
-              <p class="text-sm text-muted-foreground">Developer dan tech enthusiast dari berbagai background</p>
+              <UIcon :name="$t('komunitas.kontributor.icon')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.kontributor.judul') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('komunitas.kontributor.deskripsi') }}</p>
             </div>
 
             <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div class="mb-3 text-3xl">🧑‍🏫</div>
-              <h3 class="mb-2 text-xl font-semibold text-foreground">Mentor & Praktisi</h3>
-              <p class="text-sm text-muted-foreground">Profesional berpengalaman yang membimbing anggota</p>
+              <UIcon :name="$t('komunitas.mentor.icon')" class="mb-3 h-8 w-8 text-primary" />
+              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('komunitas.mentor.judul') }}</h3>
+              <p class="text-sm text-muted-foreground">{{ $t('komunitas.mentor.deskripsi') }}</p>
             </div>
           </div>
 
           <div class="mt-12 rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-transparent p-8 text-center">
             <p class="text-lg text-foreground">
-              Tidak harus jago sejak awal. Yang penting punya <span class="font-semibold text-primary">niat belajar dan semangat berkembang</span> 🌿
+              {{ $t('komunitas.footer') }} <span class="font-semibold text-primary">{{ $t('komunitas.footerTebal') }}</span> <UIcon :name="$t('komunitas.footerIcon')" class="inline-block ml-1" />
             </p>
           </div>
         </div>
@@ -252,26 +244,26 @@ const navigateToAbout = () => {
 
             <div class="relative">
               <h2 class="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-                Ingin Berkolaborasi?
+                {{ $t('cta.judul') }}
               </h2>
               <p class="mb-8 text-lg text-muted-foreground">
-                Kami terbuka untuk kerja sama proyek, pengembangan sistem, kegiatan komunitas, dan diskusi teknologi.
+                {{ $t('cta.deskripsi') }}
               </p>
 
               <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <UButton
                   size="xl"
                   color="primary"
-                  @click="navigateToContact"
+                  @click="navigateTo('/#contact')"
                 >
-                  Hubungi Kami
+                  {{ $t('cta.tombolUtama') }}
                 </UButton>
                 <UButton
                   size="xl"
                   variant="outline"
                   to="/about"
                 >
-                  Pelajari Lebih Lanjut
+                  {{ $t('cta.tombolKedua') }}
                 </UButton>
               </div>
             </div>
