@@ -30,7 +30,7 @@ const handleChangeLocale = async (localeCode: string) => {
     <FloatingNav 
       :nav-items="navItems"
       :available-locales="availableLocales"
-      @login="$router.push('/login')"
+
       @change-locale="handleChangeLocale"
     >
       <template #logo>

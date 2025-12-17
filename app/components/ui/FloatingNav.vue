@@ -21,7 +21,7 @@ interface Props {
 defineProps<Props>()
 
 const emit = defineEmits<{
-  login: []
+  AboutUs: []
   changeLocale: [localeCode: string]
 }>()
 
@@ -33,18 +33,18 @@ const closeMobileMenu = () => {
   mobileMenuOpen.value = false
 }
 
-const onLoginClick = () => {
+const onAboutUsClick = () => {
   closeMobileMenu()
-  emit('login')
+  emit('AboutUs')
 }
 </script>
 
 <template>
-  <div class="fixed top-0 inset-x-0 z-[5000] px-4 pt-4">
-    <div class="hidden md:block max-w-3xl mx-auto">
+  <div class="fixed top-0 inset-x-0 z-50000 px-4 pt-2">
+    <div class="hidden md:block max-w-full mx-auto">
       <GlowingEffect class="flex flex-row items-center justify-between rounded-full border border-transparent dark:border-white/[0.2] dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] px-6 py-3">
         <div class="flex items-center">
-          <slot name="logo" />
+          <slot name="logo"/>
         </div>
 
         <div class="flex items-center gap-1 max-w-3xl">
@@ -78,9 +78,10 @@ const onLoginClick = () => {
 
         <UButton
           variant="outline"
-          size="sm"
-          label="Login"
-          @click="onLoginClick"
+          size="lg"
+          label="About Us"
+          @click="onAboutUsClick"
+            ABOUT US
         />
         </div>
       </GlowingEffect>
@@ -150,8 +151,9 @@ const onLoginClick = () => {
             <UButton
               block
               variant="outline"
-              label="Login"
-              @click="onLoginClick"
+              label="About Us"
+              @click="onAboutUsClick"
+                ABOUT US
             />
           </div>
           </GlowingEffect>
