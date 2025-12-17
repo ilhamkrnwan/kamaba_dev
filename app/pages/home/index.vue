@@ -3,7 +3,7 @@ const { t } = useI18n()
 
 useSeoMeta({
   title: t('KAMABA DEV - Berkarya dengan Teknologi'),
-  description: t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.'),
+  description: t('Menyatukan semangat untuk belajar dan berkreatif bersama dalam satu komunitas. Misi kami adalah melahirkan teknologi modern yang menjadi solusi bagi tantangan di sektor pendidikan, organisasi, dan sosial kemasyarakatan.'),
 })
 </script>
 
@@ -12,7 +12,7 @@ useSeoMeta({
     <!-- Hero Section -->
     <UiHeroSection
       :title="$t('KAMABA DEV')"
-      :subtitle="$t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.')"
+      :subtitle="$t('Menyatukan semangat untuk belajar dan berkreatif bersama dalam satu komunitas. Misi kami adalah melahirkan teknologi modern yang menjadi solusi bagi tantangan di sektor pendidikan, organisasi, dan sosial kemasyarakatan.')"
       :badge="$t('Terbuka untuk pekerjaan')"
       :primary-button="$t('Portofolio')"
       :secondary-button="$t('Mari Berkolaborasi!')"

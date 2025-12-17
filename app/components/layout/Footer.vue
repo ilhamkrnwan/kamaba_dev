@@ -6,12 +6,12 @@
   >
     <template #left>
       <p class="text-muted dark:text-white text-sm">
-        Copyright © {{ new Date().getFullYear() }} by NuiCoder. All rights
+        Copyright © {{ new Date().getFullYear() }} by Kamaba Developer Team. All rights
         reserved.
       </p>
     </template>
 
-    <template #right>
+    <!-- <template #right>
       <UButton
         icon="i-simple-icons-github"
         color="neutral"
@@ -20,6 +20,6 @@
         target="_blank"
         aria-label="GitHub"
       />
-    </template>
+    </template> -->
   </UFooter>
 </template>
