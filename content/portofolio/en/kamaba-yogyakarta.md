@@ -1,37 +1,73 @@
 ---
 title: Kamaba Yogyakarta
-description: Website profil Kamaba Yogyakarta dengan sistem manajemen konten modern
-image: /images/portofolio/kamaba-yogyakarta.jpg
-category: Web Development
+description: Website profile Kamaba Yogyakarta dengan sistem manajemen konten modern
+image: /portofolio/kamaba-yogyakarta/hero.jpg
+category: Website
+services:
+  - Web Development
+  - UI/UX Design
 client: Kamaba Yogyakarta
 date: 2024-03-15
+status: Completed in 2024
+industry: Education & Organization
 tags:
   - Nuxt 3
   - Vue.js
   - Tailwind CSS
   - CMS
+_path: /portofolio/en/kamaba-yogyakarta
 ---
 
 # Kamaba Yogyakarta
 
-Proyek pengembangan website profil untuk Kamaba Yogyakarta yang menampilkan informasi lengkap tentang organisasi, kegiatan, dan layanan yang tersedia.
+## Website
+## Web Development
+## UI/UX Design
 
-## Fitur Utama
+### Project Status
+Completed in 2024
 
-- **Content Management System** - Sistem manajemen konten yang mudah digunakan
-- **Responsive Design** - Tampilan optimal di semua perangkat
-- **SEO Optimized** - Dioptimalkan untuk mesin pencari
-- **Fast Performance** - Performa loading yang cepat
+### Industry
+Education & Organization
 
-## Teknologi yang Digunakan
+![Kamaba Yogyakarta Preview](/portofolio/kamaba-yogyakarta/preview.jpg)
 
-Website ini dibangun menggunakan teknologi modern:
+## What Our Client Wants
 
-- Nuxt 3 untuk framework
-- Vue.js untuk UI components
-- Tailwind CSS untuk styling
-- Nuxt Content untuk CMS
+Development of a modern profile website for Kamaba Yogyakarta that showcases comprehensive information about the organization, activities, and services available. The website needs to be easily manageable by the team and provide an excellent user experience across all devices.
 
-## Hasil
+## The Client's Goals
 
-Website yang responsif, cepat, dan mudah dikelola oleh tim Kamaba Yogyakarta untuk update konten secara berkala.
+### Modern Online Presence
+Create a professional and modern website that represents Kamaba Yogyakarta's values and mission.
+
+### Easy Content Management
+Provide an intuitive content management system for regular updates without technical knowledge.
+
+### Optimal User Experience
+Deliver a fast, responsive, and SEO-optimized website that reaches wider audiences.
+
+![Kamaba Yogyakarta Mockup 1](/portofolio/kamaba-yogyakarta/mockup-1.jpg)
+![Kamaba Yogyakarta Mockup 2](/portofolio/kamaba-yogyakarta/mockup-2.jpg)
+![Kamaba Yogyakarta Mockup 3](/portofolio/kamaba-yogyakarta/mockup-3.jpg)
+
+## The Results
+
+### Content Management System
+Easy-to-use CMS allowing the team to update content independently without developer assistance.
+
+### Responsive Design
+Optimal viewing experience across all devices, from mobile phones to desktop computers.
+
+### Fast Performance
+Lightning-fast loading times with optimized assets and modern web technologies.
+
+### SEO Optimized
+Search engine friendly structure increasing online visibility and organic reach.
+
+## What Our Developer Used
+
+![Nuxt 3](/tech/nuxt.svg)
+![Vue.js](/tech/vue.svg)
+![Tailwind CSS](/tech/tailwind.svg)
+![Nuxt Content](/tech/nuxt-content.svg)

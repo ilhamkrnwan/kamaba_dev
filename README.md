@@ -1,14 +1,14 @@
-# KAMABA DEV 🚀
+# Qinaryan 🚀
 
-**KAMABA DEV** adalah komunitas pengembang digital di bawah naungan **KAMABA** yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.
+**Qinaryan** adalah komunitas pengembang digital di bawah naungan **KAMABA** yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.
 
 Kami hadir sebagai ruang **belajar, berkolaborasi, dan berkarya** bagi mahasiswa, alumni, dan siapa pun yang tertarik dengan dunia teknologi digital.
 
 ---
 
-## 🌱 Apa itu KAMABA DEV?
+## 🌱 Apa itu Qinaryan?
 
-KAMABA DEV bukan sekadar tim teknis.  
+Qinaryan bukan sekadar tim teknis.  
 Kami adalah komunitas yang:
 
 - Mengembangkan **website dan aplikasi**
@@ -39,7 +39,7 @@ Kami bergerak di beberapa bidang utama:
 
 ## 👥 Siapa Saja di Dalamnya?
 
-KAMABA DEV terdiri dari:
+Qinaryan terdiri dari:
 
 - Mahasiswa IT  
 - Alumni IT  
@@ -51,7 +51,7 @@ Yang penting punya **niat belajar dan semangat berkembang** 🌿
 
 ---
 
-## 🌍 Kenapa KAMABA DEV Ada?
+## 🌍 Kenapa Qinaryan Ada?
 
 Karena kami percaya bahwa:
 
@@ -73,13 +73,13 @@ Kami terbuka untuk:
 - Kegiatan komunitas
 - Diskusi dan sharing teknologi
 
-Silakan hubungi kami melalui website atau media sosial resmi KAMABA DEV.
+Silakan hubungi kami melalui website atau media sosial resmi Qinaryan.
 
 ---
 
 ## ✨ Penutup
 
-KAMABA DEV adalah rumah bagi ide, teknologi, dan kolaborasi.  
+Qinaryan adalah rumah bagi ide, teknologi, dan kolaborasi.  
 Bersama, kita bangun solusi digital yang bermakna.
 
-**KAMABA DEV – Berkarya dengan Teknologi.**
+**Qinaryan – Berkarya dengan Teknologi.**

@@ -9,12 +9,12 @@ const availableLocales = computed(() =>
 
 const navItems = computed(() => [
   {
-    name: "Home",
+    name: t('Beranda'),
     link: "/home",
     icon: "lucide-home",
   },
   {
-    name: "Portofolio",
+    name: t('Portofolio'),
     link: "/portofolio",
     icon: "lucide-folder-open",
   }

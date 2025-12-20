@@ -1,3 +1,43 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useColorMode } from '#imports'
+
+interface Stat {
+  value: string
+  label: string
+  description: string
+}
+
+interface Props {
+  title: string
+  subtitle: string
+  badge?: string
+  primaryButton?: string
+  secondaryButton?: string
+  stats?: Stat[]
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  badge: 'Sedang Berkembang',
+  primaryButton: 'Mulai Berkolaborasi',
+  secondaryButton: 'Pelajari Lebih Lanjut'
+})
+
+const emit = defineEmits<{
+  primaryAction: []
+  secondaryAction: []
+}>()
+
+const colorMode = useColorMode()
+
+const spotlightColor = computed(() => 
+  colorMode.value === 'dark' ? 'white' : '#3b82f6'
+)
+
+const onPrimaryAction = () => emit('primaryAction')
+const onSecondaryAction = () => emit('secondaryAction')
+</script>
+
 <template>
   <div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background">
     <!-- Animated grid background -->
@@ -20,7 +60,7 @@
     />
 
     <!-- Content -->
-    <div class="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-6">
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-6 py-24 animate-fade-in-up">
       <div class="text-center">
         <!-- Badge -->
         <div class="mb-8 inline-flex items-center rounded-full border border-border bg-card px-4 py-1.5 text-sm">
@@ -104,46 +144,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { computed } from 'vue'
-import { useColorMode } from '#imports'
-
-interface Stat {
-  value: string
-  label: string
-  description: string
-}
-
-interface Props {
-  title: string
-  subtitle: string
-  badge?: string
-  primaryButton?: string
-  secondaryButton?: string
-  stats?: Stat[]
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  badge: 'Sedang Berkembang',
-  primaryButton: 'Mulai Berkolaborasi',
-  secondaryButton: 'Pelajari Lebih Lanjut'
-})
-
-const emit = defineEmits<{
-  primaryAction: []
-  secondaryAction: []
-}>()
-
-const colorMode = useColorMode()
-
-const spotlightColor = computed(() => 
-  colorMode.value === 'dark' ? 'white' : '#3b82f6'
-)
-
-const onPrimaryAction = () => emit('primaryAction')
-const onSecondaryAction = () => emit('secondaryAction')
-</script>
 
 <style scoped>
 @keyframes fadeInUp {

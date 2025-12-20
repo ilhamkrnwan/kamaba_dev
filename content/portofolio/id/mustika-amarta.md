@@ -1,39 +1,75 @@
 ---
 title: Mustika Amarta
 description: Aplikasi web untuk manajemen spa dan wellness center dengan booking system terintegrasi
-image: /images/portofolio/mustika-amarta.jpg
+image: /portofolio/mustika-amarta/hero.jpg
 category: Web Application
+services:
+  - Full-Stack Development
+  - System Integration
+  - UI/UX Design
 client: Mustika Amarta Spa
 date: 2024-05-20
+status: Selesai pada 2024
+industry: Kesehatan & Wellness
 tags:
   - Vue.js
   - Node.js
   - PostgreSQL
   - Booking System
+_path: /portofolio/id/mustika-amarta
 ---
 
 # Mustika Amarta
 
-Platform web untuk manajemen spa dan wellness center dengan sistem booking online yang terintegrasi penuh dengan manajemen operasional.
+## Web Application
+## Full-Stack Development
+## System Integration
 
-## Fitur Utama
+### Status Proyek
+Selesai pada 2024
 
-- **Online Booking** - Sistem pemesanan treatment secara online
-- **Customer Management** - Manajemen data pelanggan dan riwayat treatment
-- **Staff Scheduling** - Penjadwalan therapist dan room
-- **Payment Integration** - Integrasi dengan payment gateway
-- **Reporting Dashboard** - Dashboard analitik dan laporan
+### Industri
+Kesehatan & Wellness
 
-## Teknologi yang Digunakan
+![Mustika Amarta Preview](/portofolio/mustika-amarta/preview.jpg)
 
-Dibangun dengan teknologi enterprise-grade:
+## Yang Klien Kami Inginkan
 
-- Vue.js 3 dengan Composition API
-- Node.js & Express untuk backend
-- PostgreSQL untuk database
-- Redis untuk caching
-- Tailwind CSS untuk UI
+Pengembangan platform web komprehensif untuk manajemen spa dan wellness center dengan sistem booking online terintegrasi. Platform ini perlu menyederhanakan proses operasional sekaligus memberikan pelanggan pengalaman booking yang mulus.
 
-## Hasil
+## Tujuan Klien
 
-Sistem yang meningkatkan efisiensi operasional spa hingga 40% dan memberikan pengalaman booking yang seamless untuk customer.
+### Efisiensi Operasional
+Mengotomatisasi dan menyederhanakan operasi spa termasuk penjadwalan staff, manajemen ruangan, dan pelacakan pelanggan.
+
+### Booking Online Mulus
+Memberikan pelanggan sistem booking online yang mudah digunakan dan tersedia 24/7.
+
+### Wawasan Berbasis Data
+Menghasilkan analitik dan laporan komprehensif untuk mendukung keputusan bisnis.
+
+![Mustika Amarta Mockup 1](/portofolio/mustika-amarta/mockup-1.jpg)
+![Mustika Amarta Mockup 2](/portofolio/mustika-amarta/mockup-2.jpg)
+![Mustika Amarta Mockup 3](/portofolio/mustika-amarta/mockup-3.jpg)
+
+## Hasil yang Dicapai
+
+### Peningkatan Efisiensi Operasional 40%
+Proses penjadwalan dan manajemen otomatis mengurangi pekerjaan manual secara signifikan.
+
+### Pengalaman Pelanggan Mulus
+Antarmuka booking intuitif dengan ketersediaan real-time dan konfirmasi instan.
+
+### Sistem Pembayaran Terintegrasi
+Integrasi payment gateway aman memungkinkan proses transaksi yang lancar.
+
+### Analitik Komprehensif
+Dashboard detail memberikan wawasan tentang kinerja bisnis dan perilaku pelanggan.
+
+## Teknologi yang Developer Kami Gunakan
+
+![Vue.js](/tech/vue.svg)
+![Node.js](/tech/node.svg)
+![PostgreSQL](/tech/postgresql.svg)
+![Redis](/tech/redis.svg)
+![Tailwind CSS](/tech/tailwind.svg)

@@ -5,9 +5,7 @@ const { t } = useI18n();
 <template>
   <NuxtLoadingIndicator />
   <NuxtRouteAnnouncer />
-  <UApp>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </UApp>
 </template>

@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: t('KAMABA DEV - Berkarya dengan Teknologi'),
+  title: t('QINARYAN - Berkarya dengan Teknologi'),
   description: t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.'),
 })
 </script>
@@ -11,7 +11,7 @@ useSeoMeta({
   <div class="min-h-screen">
     <!-- Hero Section -->
     <UiHeroSection
-      :title="$t('KAMABA DEV')"
+      :title="$t('QINARYAN')"
       :subtitle="$t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.')"
       :badge="$t('Terbuka untuk pekerjaan')"
       :primary-button="$t('Portofolio')"
@@ -38,11 +38,11 @@ useSeoMeta({
       class="font-['Baumans']"
     />
 
-    <!-- What is KAMABA DEV Section -->
+    <!-- What is QINARYAN Section -->
     <section class="relative overflow-hidden py-20 md:py-32" id="about">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          :title="$t('Tentang KAMABA DEV')"
+          :title="$t('Tentang QINARYAN')"
           :subtitle="$t('Kami adalah komunitas pengembang digital yang berkomitmen untuk menciptakan solusi teknologi inovatif dan berkelanjutan bagi pendidikan, organisasi, dan masyarakat luas.')"
           :badge="$t('Siapa Kami')"
           size="md"
@@ -53,7 +53,7 @@ useSeoMeta({
           <div class="rounded-2xl border border-border bg-card/50 p-8 backdrop-blur-sm md:p-12">
             <div class="space-y-6 text-center">
               <p class="text-lg text-muted-foreground leading-relaxed md:text-xl">
-                {{ $t('KAMABA DEV dimulai dari') }} <span class="font-semibold text-primary">{{ $t('visi sederhana') }}</span> {{ $t(': menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat.') }}
+                {{ $t('QINARYAN dimulai dari') }} <span class="font-semibold text-primary">{{ $t('visi sederhana') }}</span> {{ $t(': menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat.') }}
               </p>
               <p class="text-lg text-muted-foreground leading-relaxed">
                 {{ $t('Kami percaya bahwa') }} <span class="font-semibold text-foreground">{{ $t('teknologi harus mudah diakses, transparan, dan memberdayakan') }}</span>{{ $t(', bukan memperumit.') }}
@@ -104,7 +104,7 @@ useSeoMeta({
       </div>
     </section>
 
-    <!-- Why KAMABA DEV Section -->
+    <!-- Why QINARYAN Section -->
     <section class="relative overflow-hidden py-20 md:py-32">
       <!-- Background decoration -->
       <div class="pointer-events-none absolute inset-0">
@@ -114,7 +114,7 @@ useSeoMeta({
 
       <div class="container relative mx-auto px-4">
         <UiSectionHeading
-          :title="$t('Mengapa Memilih KAMABA DEV?')"
+          :title="$t('Mengapa Memilih QINARYAN?')"
           :badge="$t('Keunggulan Kami')"
           size="md"
         />
@@ -165,7 +165,7 @@ useSeoMeta({
     <section class="py-20 md:py-32">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          :title="$t('Siapa Saja yang Ada di KAMABA DEV?')"
+          :title="$t('Siapa Saja yang Ada di QINARYAN?')"
           :subtitle="$t('Komunitas kami terdiri dari berbagai latar belakang yang bekerja sama untuk tujuan yang sama')"
           :badge="$t('Komunitas')"
           size="md"

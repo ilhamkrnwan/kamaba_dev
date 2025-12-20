@@ -1,41 +1,78 @@
 ---
 title: Wicara Space
 description: Platform kolaborasi dan komunikasi untuk tim remote dengan fitur video conference dan project management
-image: /images/portofolio/wicara-space.jpg
+image: /portofolio/wicara-space/hero.jpg
 category: SaaS Platform
+services:
+  - Full-Stack Development
+  - Real-time Systems
+  - UI/UX Design
 client: Wicara Space Inc.
 date: 2024-08-10
+status: Selesai pada 2024
+industry: Teknologi & Kolaborasi
 tags:
   - React
   - Next.js
   - WebRTC
   - Real-time
   - TypeScript
+_path: /portofolio/id/wicara-space
 ---
 
 # Wicara Space
 
-Platform kolaborasi workspace modern yang menggabungkan video conference, chat, dan project management dalam satu aplikasi terintegrasi.
+## SaaS Platform
+## Full-Stack Development
+## Real-time Systems
 
-## Fitur Utama
+### Status Proyek
+Selesai pada 2024
 
-- **Video Conference** - High quality video call dengan WebRTC
-- **Real-time Chat** - Messaging dengan socket connection
-- **Project Management** - Kanban board dan task tracking
-- **File Sharing** - Sharing dan kolaborasi dokumen
-- **Team Spaces** - Workspace terpisah untuk setiap tim
+### Industri
+Teknologi & Kolaborasi
 
-## Teknologi yang Digunakan
+![Wicara Space Preview](/portofolio/wicara-space/preview.jpg)
 
-Dibangun dengan stack modern untuk real-time collaboration:
+## Yang Klien Kami Inginkan
 
-- Next.js 14 untuk framework
-- TypeScript untuk type safety
-- WebRTC untuk video streaming
-- Socket.io untuk real-time messaging
-- PostgreSQL + Redis untuk data layer
-- Tailwind CSS untuk styling
+Pengembangan platform kolaborasi workspace modern yang menggabungkan video conference, chat real-time, dan project management dalam satu aplikasi terintegrasi. Platform ini perlu mendukung tim remote dengan alat komunikasi yang handal dan berkualitas tinggi.
 
-## Hasil
+## Tujuan Klien
 
-Platform yang stabil dengan 10,000+ active users, average uptime 99.9%, dan response time < 100ms untuk real-time features.
+### Kolaborasi All-in-One
+Menyediakan platform terpadu yang menghilangkan kebutuhan akan berbagai alat terpisah.
+
+### Komunikasi Berkualitas Tinggi
+Menghadirkan video dan audio yang jernih dengan latensi minimal untuk meeting remote yang mulus.
+
+### Arsitektur Skalabel
+Membangun sistem yang dapat berkembang dari tim kecil hingga organisasi tingkat enterprise.
+
+![Wicara Space Mockup 1](/portofolio/wicara-space/mockup-1.jpg)
+![Wicara Space Mockup 2](/portofolio/wicara-space/mockup-2.jpg)
+![Wicara Space Mockup 3](/portofolio/wicara-space/mockup-3.jpg)
+
+## Hasil yang Dicapai
+
+### 10,000+ Pengguna Aktif
+Berhasil melayani ribuan pengguna di berbagai organisasi dan tim.
+
+### Uptime 99.9%
+Infrastruktur handal memastikan ketersediaan konsisten untuk komunikasi bisnis kritis.
+
+### Response Time di Bawah 100ms
+Fitur real-time super cepat memberikan pengalaman pengguna yang mulus.
+
+### Kolaborasi Terintegrasi
+Integrasi mulus dari video, chat, dan project management mengurangi perpindahan antar tool.
+
+## Teknologi yang Developer Kami Gunakan
+
+![Next.js](/tech/nextjs.svg)
+![TypeScript](/tech/typescript.svg)
+![WebRTC](/tech/webrtc.svg)
+![Socket.io](/tech/socketio.svg)
+![PostgreSQL](/tech/postgresql.svg)
+![Redis](/tech/redis.svg)
+![Tailwind CSS](/tech/tailwind.svg)
