@@ -1,7 +1,7 @@
 ---
 title: Mustika Amarta
 description: Aplikasi web untuk manajemen spa dan wellness center dengan booking system terintegrasi
-image: /portofolio/mustika-amarta/hero.jpg
+image: /image.png
 category: Web Application
 services:
   - Full-Stack Development

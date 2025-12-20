@@ -1,7 +1,7 @@
 ---
 title: Wicara Space
 description: Platform kolaborasi dan komunikasi untuk tim remote dengan fitur video conference dan project management
-image: /portofolio/wicara-space/hero.jpg
+image: /image.png
 category: SaaS Platform
 services:
   - Full-Stack Development

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+
 /**
  * GlowingEffect - Inspired by Aceternity UI
  * A border glowing effect that adapts to any container or card
@@ -23,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
   spread: 20,
   variant: 'default',
   glow: false,
-  disabled: true,
+  disabled: false,
   movementDuration: 2,
   borderWidth: 1
 })
@@ -31,6 +33,7 @@ const props = withDefaults(defineProps<Props>(), {
 const containerRef = ref<HTMLDivElement | null>(null)
 const lastPosition = ref({ x: 0, y: 0 })
 const animationFrameRef = ref<number>(0)
+const angleAnimationRef = ref<number>(0)
 const startAngle = ref(0)
 const isActive = ref(false)
 
@@ -78,6 +81,11 @@ const handleMove = (e?: MouseEvent | PointerEvent | { x: number; y: number }) =>
     const angleDiff = ((targetAngle - currentAngle + 180) % 360) - 180
     const newAngle = currentAngle + angleDiff
 
+    // Cancel previous animation
+    if (angleAnimationRef.value) {
+      cancelAnimationFrame(angleAnimationRef.value)
+    }
+
     // Animate to new angle
     const startTime = performance.now()
     const duration = props.movementDuration * 1000
@@ -89,10 +97,10 @@ const handleMove = (e?: MouseEvent | PointerEvent | { x: number; y: number }) =>
       startAngle.value = currentAngle + (newAngle - currentAngle) * eased
       
       if (progress < 1) {
-        requestAnimationFrame(animateAngle)
+        angleAnimationRef.value = requestAnimationFrame(animateAngle)
       }
     }
-    requestAnimationFrame(animateAngle)
+    angleAnimationRef.value = requestAnimationFrame(animateAngle)
   })
 }
 
@@ -109,6 +117,9 @@ onMounted(() => {
 onUnmounted(() => {
   if (animationFrameRef.value) {
     cancelAnimationFrame(animationFrameRef.value)
+  }
+  if (angleAnimationRef.value) {
+    cancelAnimationFrame(angleAnimationRef.value)
   }
   window.removeEventListener('scroll', handleScroll)
   document.body.removeEventListener('pointermove', handlePointerMove)
@@ -194,23 +205,27 @@ const cssVars = computed(() => ({
   background-attachment: fixed;
   opacity: var(--active);
   transition: opacity 0.3s ease;
+  
+  /* Modern mask syntax */
   mask-clip: padding-box, border-box;
   mask-composite: intersect;
-  -webkit-mask-clip: padding-box, border-box;
-  -webkit-mask-composite: source-in;
   mask-image: linear-gradient(#0000, #0000), 
     conic-gradient(
       from calc((var(--start) - var(--spread)) * 1deg),
-      #00000000 0deg,
+      transparent 0deg,
       #fff,
-      #00000000 calc(var(--spread) * 2deg)
+      transparent calc(var(--spread) * 2deg)
     );
+  
+  /* Webkit fallback */
+  -webkit-mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-in;
   -webkit-mask-image: linear-gradient(#0000, #0000), 
     conic-gradient(
       from calc((var(--start) - var(--spread)) * 1deg),
-      #00000000 0deg,
+      transparent 0deg,
       #fff,
-      #00000000 calc(var(--spread) * 2deg)
+      transparent calc(var(--spread) * 2deg)
     );
 }
 </style>

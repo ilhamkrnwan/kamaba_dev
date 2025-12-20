@@ -1,7 +1,7 @@
 ---
 title: Kamaba Yogyakarta
 description: Website profile Kamaba Yogyakarta dengan sistem manajemen konten modern
-image: /portofolio/kamaba-yogyakarta/hero.jpg
+image: /image.png
 category: Website
 services:
   - Web Development
