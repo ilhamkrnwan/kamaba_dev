@@ -31,7 +31,7 @@ const emit = defineEmits<{
 const colorMode = useColorMode()
 
 const spotlightColor = computed(() => 
-  colorMode.value === 'dark' ? 'white' : '#3b82f6'
+  colorMode.value === 'dark' ? 'transparent' : '#3b82f6'
 )
 
 const onPrimaryAction = () => emit('primaryAction')
@@ -39,16 +39,7 @@ const onSecondaryAction = () => emit('secondaryAction')
 </script>
 
 <template>
-  <div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background">
-    <!-- Animated grid background -->
-    <div
-      class="pointer-events-none absolute inset-0 select-none [background-size:40px_40px]"
-      :class="[
-        'dark:[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]',
-        '[background-image:linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]'
-      ]"
-    />
-
+  <div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden ">
     <!-- Spotlight effects -->
     <UiSpotlight
       class="-top-40 left-0 md:-top-20 md:left-60"

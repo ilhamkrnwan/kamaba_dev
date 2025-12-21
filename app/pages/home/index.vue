@@ -5,251 +5,298 @@ useSeoMeta({
   title: t('QINARYAN - Berkarya dengan Teknologi'),
   description: t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.'),
 })
+
+// Hero Stats
+const heroStats = computed(() => [
+  {
+    value: t('20+'),
+    label: t('Proyek'),
+    description: t('Proyek yang telah diselesaikan')
+  },
+  {
+    value: t('50+'),
+    label: t('Anggota'),
+    description: t('Anggota aktif komunitas')
+  },
+  {
+    value: t('100%'),
+    label: t('Open Source'),
+    description: t('Semua proyek open source')
+  }
+])
+
+// Focus Areas
+const focusAreas = computed(() => [
+  {
+    icon: 'i-lucide-globe',
+    title: t('Website Development'),
+    description: t('Membangun website modern, responsif, dan user-friendly untuk berbagai kebutuhan bisnis dan organisasi.'),
+    tags: 'Vue.js, Nuxt, React, Next.js'
+  },
+  {
+    icon: 'i-lucide-smartphone',
+    title: t('Mobile Development'),
+    description: t('Mengembangkan aplikasi mobile native dan cross-platform yang powerful dan intuitif.'),
+    tags: 'React Native, Flutter, Ionic'
+  },
+  {
+    icon: 'i-lucide-graduation-cap',
+    title: t('E-Learning Solutions'),
+    description: t('Platform pembelajaran digital yang interaktif untuk meningkatkan pengalaman belajar mengajar.'),
+    tags: 'LMS, Interactive Content, Gamification'
+  },
+  {
+    icon: 'i-lucide-users',
+    title: t('Collaborative Tools'),
+    description: t('Sistem manajemen dan kolaborasi untuk meningkatkan produktivitas tim dan organisasi.'),
+    tags: 'Project Management, Communication, Automation'
+  }
+])
+
+// Why Us Advantages
+const advantages = computed(() => [
+  {
+    title: t('Modern & Up-to-date'),
+    description: t('Menggunakan teknologi terkini dan best practices dalam setiap proyek yang kami kerjakan.'),
+    icon: 'i-lucide-sparkles',
+    size: 'large' as const
+  },
+  {
+    title: t('Open Source'),
+    description: t('Komitmen pada transparansi dan berbagi pengetahuan melalui kontribusi open source.'),
+    icon: 'i-lucide-code-2'
+  },
+  {
+    title: t('Professional'),
+    description: t('Standar profesional tinggi dengan dokumentasi lengkap dan kode berkualitas.'),
+    icon: 'i-lucide-star'
+  },
+  {
+    title: t('Kolaboratif'),
+    description: t('Membangun dengan semangat kerja sama dan saling mendukung antar anggota.'),
+    icon: 'i-lucide-hand-metal'
+  },
+  {
+    title: t('Berkelanjutan'),
+    description: t('Fokus pada solusi jangka panjang yang scalable dan mudah dimaintain.'),
+    icon: 'i-lucide-trending-up',
+    size: 'wide' as const
+  }
+])
+
+// Community Members
+const communityMembers = computed(() => [
+  {
+    icon: 'i-lucide-graduation-cap',
+    title: t('Mahasiswa Aktif'),
+    description: t('Mahasiswa yang ingin belajar dan mengembangkan skill teknologi sambil berkontribusi pada proyek nyata.')
+  },
+  {
+    icon: 'i-lucide-briefcase',
+    title: t('Alumni Profesional'),
+    description: t('Alumni yang sudah bekerja di industri dan ingin berbagi pengalaman serta membimbing generasi selanjutnya.')
+  },
+  {
+    icon: 'i-lucide-heart',
+    title: t('Kontributor Open Source'),
+    description: t('Developer yang passionate tentang open source dan ingin berkontribusi pada proyek-proyek bermakna.')
+  },
+  {
+    icon: 'i-lucide-lightbulb',
+    title: t('Mentor & Advisor'),
+    description: t('Profesional berpengalaman yang memberikan bimbingan dan arahan strategis untuk perkembangan komunitas.')
+  }
+])
+
+// Testimonials
+const testimonials = computed(() => [
+  {
+    id: 1,
+    quote: t('QINARYAN memberikan kinerja terbaiknya dalam membuat Website! Sangat profesional dan hasil memuaskan.'),
+    name: 'Dhimas Sulistio',
+    position: t('Web Developer'),
+    rating: '20° FS',
+    image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Dhimas'
+  },
+  {
+    id: 2,
+    quote: t('Pelayanan yang sangat profesional dan hasil yang memuaskan. Highly recommended untuk proyek digital!'),
+    name: 'Sarah Johnson',
+    position: t('Product Manager'),
+    rating: '18° FS',
+    image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah'
+  },
+  {
+    id: 3,
+    quote: t('Tim yang solid dan komunikatif. Proyek selesai tepat waktu dengan kualitas terbaik.'),
+    name: 'Ahmad Rizki',
+    position: t('CEO Startup'),
+    rating: '19° FS',
+    image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmad'
+  }
+])
+
+// FAQ Items
+const faqItems = computed(() => [
+  {
+    question: t('Apa itu QINARYAN?'),
+    answer: t('QINARYAN adalah komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat. Kami berkomitmen pada prinsip open source dan kolaborasi.'),
+    icon: 'i-lucide-info',
+    link: {
+      text: t('Pelajari lebih lanjut'),
+      url: '/about'
+    }
+  },
+  {
+    question: t('Bagaimana cara bergabung dengan QINARYAN?'),
+    answer: t('Anda dapat bergabung dengan menghubungi kami melalui halaman kontak atau mengikuti akun media sosial kami. Kami terbuka untuk semua orang yang memiliki passion di bidang teknologi, baik mahasiswa aktif, alumni, maupun profesional.'),
+    icon: 'i-lucide-user-plus'
+  },
+  {
+    question: t('Apakah layanan QINARYAN berbayar?'),
+    answer: t('Untuk proyek komunitas dan edukasi, sebagian besar layanan kami gratis dan open source. Untuk proyek komersial atau kebutuhan khusus, kami menawarkan paket layanan dengan harga yang kompetitif. Hubungi kami untuk informasi lebih lanjut.'),
+    icon: 'i-lucide-dollar-sign'
+  },
+  {
+    question: t('Teknologi apa saja yang digunakan QINARYAN?'),
+    answer: t('Kami menggunakan teknologi modern seperti Vue.js, Nuxt, React, Next.js untuk web development. Untuk mobile, kami menggunakan React Native dan Flutter. Kami juga berpengalaman dengan berbagai backend teknologi dan cloud services.'),
+    icon: 'i-lucide-code-2',
+    link: {
+      text: t('Lihat portofolio kami'),
+      url: '/portfolio'
+    }
+  },
+  {
+    question: t('Berapa lama waktu pengerjaan proyek?'),
+    answer: t('Waktu pengerjaan bervariasi tergantung kompleksitas proyek. Proyek sederhana bisa selesai dalam 2-4 minggu, sedangkan proyek yang lebih kompleks bisa memakan waktu 2-6 bulan. Kami akan memberikan estimasi waktu yang akurat setelah diskusi kebutuhan.'),
+    icon: 'i-lucide-clock'
+  },
+  {
+    question: t('Apakah QINARYAN menerima kontribusi open source?'),
+    answer: t('Tentu! Kami sangat terbuka untuk kontribusi dari siapa saja. Semua proyek open source kami tersedia di GitHub dan kami menyambut pull request, bug reports, dan saran dari komunitas.'),
+    icon: 'i-lucide-heart',
+    link: {
+      text: t('Kunjungi GitHub kami'),
+      url: 'https://github.com/qinaryan'
+    }
+  }
+])
 </script>
 
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
     <UiHeroSection
+      v-motion
+      :initial="{ opacity: 0, y: -50 }"
+      :visible="{ opacity: 1, y: 0, transition: { duration: 600, ease: 'easeOut' } }"
       :title="$t('QINARYAN')"
       :subtitle="$t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.')"
       :badge="$t('Terbuka untuk pekerjaan')"
       :primary-button="$t('Portofolio')"
       :secondary-button="$t('Mari Berkolaborasi!')"
-      :stats="[
-        {
-          value: $t('20+'),
-          label: $t('Proyek'),
-          description: $t('Proyek yang telah diselesaikan')
-        },
-        {
-          value: $t('50+'),
-          label: $t('Anggota'),
-          description: $t('Anggota aktif komunitas')
-        },
-        {
-          value: $t('100%'),
-          label: $t('Open Source'),
-          description: $t('Semua proyek open source')
-        }
-      ]"
+      :stats="heroStats"
+      class="font-['Baumans']"
       @primary-action="navigateTo('/portfolio')"
       @secondary-action="navigateTo('/#contact')"
-      class="font-['Baumans']"
     />
 
-    <!-- What is QINARYAN Section -->
-    <section class="relative overflow-hidden py-20 md:py-32" id="about">
-      <div class="container mx-auto px-4">
-        <UiSectionHeading
-          :title="$t('Tentang QINARYAN')"
-          :subtitle="$t('Kami adalah komunitas pengembang digital yang berkomitmen untuk menciptakan solusi teknologi inovatif dan berkelanjutan bagi pendidikan, organisasi, dan masyarakat luas.')"
-          :badge="$t('Siapa Kami')"
-          size="md"
-          :gradient="true"
-        />
-
-        <div class="mx-auto max-w-4xl">
-          <div class="rounded-2xl border border-border bg-card/50 p-8 backdrop-blur-sm md:p-12">
-            <div class="space-y-6 text-center">
-              <p class="text-lg text-muted-foreground leading-relaxed md:text-xl">
-                {{ $t('QINARYAN dimulai dari') }} <span class="font-semibold text-primary">{{ $t('visi sederhana') }}</span> {{ $t(': menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat.') }}
-              </p>
-              <p class="text-lg text-muted-foreground leading-relaxed">
-                {{ $t('Kami percaya bahwa') }} <span class="font-semibold text-foreground">{{ $t('teknologi harus mudah diakses, transparan, dan memberdayakan') }}</span>{{ $t(', bukan memperumit.') }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- About Section -->
+    <UiAboutSection
+      v-motion
+      :initial="{ opacity: 0, y: 80 }"
+      :visible="{ opacity: 1, y: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :title="$t('Tentang QINARYAN')"
+      :subtitle="$t('Kami adalah komunitas pengembang digital yang berkomitmen untuk menciptakan solusi teknologi inovatif dan berkelanjutan bagi pendidikan, organisasi, dan masyarakat luas.')"
+      :badge="$t('Siapa Kami')"
+      :intro-text1="$t('QINARYAN dimulai dari')"
+      :highlight-text1="$t('visi sederhana')"
+      :intro-text2="$t(': menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat.')"
+      :belief-text1="$t('Kami percaya bahwa')"
+      :highlight-text2="$t('teknologi harus mudah diakses, transparan, dan memberdayakan')"
+      :belief-text2="$t(', bukan memperumit.')"
+    />
 
     <!-- Focus Areas Section -->
-    <section class="py-20 md:py-32">
-      <div class="container mx-auto px-4">
-        <UiSectionHeading
-          :title="$t('Area Fokus Kami')"
-          :subtitle="$t('Kami mengkhususkan diri dalam berbagai bidang teknologi untuk memberikan solusi terbaik')"
-          :badge="$t('Keahlian')"
-          size="md"
-          :show-line="true"
-        />
+    <UiFocusAreasSection
+      v-motion
+      :initial="{ opacity: 0, x: -100 }"
+      :visible="{ opacity: 1, x: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :title="$t('Area Fokus Kami')"
+      :subtitle="$t('Kami mengkhususkan diri dalam berbagai bidang teknologi untuk memberikan solusi terbaik')"
+      :badge="$t('Keahlian')"
+      :features="focusAreas"
+    />
 
-        <UiBentoGrid :columns="2" class="mx-auto max-w-6xl">
-          <UiFeatureCard
-            :icon="$t('i-heroicons-globe-alt')"
-            :title="$t('Website Development')"
-            :description="$t('Membangun website modern, responsif, dan user-friendly untuk berbagai kebutuhan bisnis dan organisasi.')"
-            :tags="$t('Vue.js, Nuxt, React, Next.js')"
-          />
-          <UiFeatureCard
-            :icon="$t('i-heroicons-device-phone-mobile')"
-            :title="$t('Mobile Development')"
-            :description="$t('Mengembangkan aplikasi mobile native dan cross-platform yang powerful dan intuitif.')"
-            :tags="$t('React Native, Flutter, Ionic')"
-          />
-          <UiFeatureCard
-            :icon="$t('i-heroicons-academic-cap')"
-            :title="$t('E-Learning Solutions')"
-            :description="$t('Platform pembelajaran digital yang interaktif untuk meningkatkan pengalaman belajar mengajar.')"
-            :tags="$t('LMS, Interactive Content, Gamification')"
-          />
-          <UiFeatureCard
-            :icon="$t('i-heroicons-users')"
-            :title="$t('Collaborative Tools')"
-            :description="$t('Sistem manajemen dan kolaborasi untuk meningkatkan produktivitas tim dan organisasi.')"
-            :tags="$t('Project Management, Communication, Automation')"
-          />
-        </UiBentoGrid>
-      </div>
-    </section>
+    <!-- Why Us Section -->
+    <UiWhyUsSection
+      v-motion
+      :initial="{ opacity: 0, x: 100 }"
+      :visible="{ opacity: 1, x: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :title="$t('Mengapa Memilih QINARYAN?')"
+      :badge="$t('Keunggulan Kami')"
+      :quote="$t('Teknologi terbaik adalah yang membuat hidup lebih mudah, bukan lebih rumit.')"
+      :advantages="advantages"
+    />
 
-    <!-- Why QINARYAN Section -->
-    <section class="relative overflow-hidden py-20 md:py-32">
-      <!-- Background decoration -->
-      <div class="pointer-events-none absolute inset-0">
-        <div class="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-        <div class="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
-      </div>
+    <!-- Community Section -->
+    <UiCommunitySection
+      v-motion
+      :initial="{ opacity: 0, scale: 0.9 }"
+      :visible="{ opacity: 1, scale: 1, transition: { duration: 600, ease: 'easeOut', delay: 100 } }"
+      :title="$t('Siapa Saja yang Ada di QINARYAN?')"
+      :subtitle="$t('Komunitas kami terdiri dari berbagai latar belakang yang bekerja sama untuk tujuan yang sama')"
+      :badge="$t('Komunitas')"
+      :members="communityMembers"
+      :closing-text1="$t('Bersama-sama, kita membangun')"
+      :closing-highlight="$t('masa depan teknologi yang lebih baik')"
+    />
 
-      <div class="container relative mx-auto px-4">
-        <UiSectionHeading
-          :title="$t('Mengapa Memilih QINARYAN?')"
-          :badge="$t('Keunggulan Kami')"
-          size="md"
-        />
+    <!-- Testimonial Section -->
+    <UiTestimonialSection
+      v-motion
+      :initial="{ opacity: 0, y: 80 }"
+      :visible="{ opacity: 1, y: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :title="$t('Apa Kata Klien Kami')"
+      :subtitle="$t('Dengarkan pengalaman mereka yang telah bekerja sama dengan kami')"
+      :badge="$t('Testimoni')"
+      :testimonials="testimonials"
+      :autoplay="true"
+      :autoplay-interval="5000"
+    />
 
-        <div class="mx-auto max-w-5xl">
-          <div class="mb-12 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-blue-500/5 p-8 md:p-12">
-            <blockquote class="text-center">
-              <p class="mb-4 text-2xl font-semibold italic text-foreground md:text-3xl">
-                "{{ $t('Teknologi terbaik adalah yang membuat hidup lebih mudah, bukan lebih rumit.') }}"
-              </p>
-            </blockquote>
-          </div>
-
-          <UiBentoGrid :columns="3">
-            <UiBentoCard
-              :title="$t('Modern & Up-to-date')"
-              :description="$t('Menggunakan teknologi terkini dan best practices dalam setiap proyek yang kami kerjakan.')"
-              :icon="$t('i-heroicons-sparkles')"
-              size="large"
-            />
-            <UiBentoCard
-              :title="$t('Open Source')"
-              :description="$t('Komitmen pada transparansi dan berbagi pengetahuan melalui kontribusi open source.')"
-              :icon="$t('i-heroicons-code-bracket')"
-            />
-            <UiBentoCard
-              :title="$t('Professional')"
-              :description="$t('Standar profesional tinggi dengan dokumentasi lengkap dan kode berkualitas.')"
-              :icon="$t('i-heroicons-star')"
-            />
-            <UiBentoCard
-              :title="$t('Kolaboratif')"
-              :description="$t('Membangun dengan semangat kerja sama dan saling mendukung antar anggota.')"
-              :icon="$t('i-heroicons-hand-raised')"
-            />
-            <UiBentoCard
-              :title="$t('Berkelanjutan')"
-              :description="$t('Fokus pada solusi jangka panjang yang scalable dan mudah dimaintain.')"
-              :icon="$t('i-heroicons-arrow-trending-up')"
-              size="wide"
-            />
-          </UiBentoGrid>
-        </div>
-      </div>
-    </section>
-
-    <!-- Who's Inside Section -->
-    <section class="py-20 md:py-32">
-      <div class="container mx-auto px-4">
-        <UiSectionHeading
-          :title="$t('Siapa Saja yang Ada di QINARYAN?')"
-          :subtitle="$t('Komunitas kami terdiri dari berbagai latar belakang yang bekerja sama untuk tujuan yang sama')"
-          :badge="$t('Komunitas')"
-          size="md"
-        />
-
-        <div class="mx-auto max-w-4xl">
-          <div class="grid gap-6 md:grid-cols-2">
-            <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('i-heroicons-academic-cap')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Mahasiswa Aktif') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('Mahasiswa yang ingin belajar dan mengembangkan skill teknologi sambil berkontribusi pada proyek nyata.') }}</p>
-            </div>
-
-            <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('i-heroicons-briefcase')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Alumni Profesional') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('Alumni yang sudah bekerja di industri dan ingin berbagi pengalaman serta membimbing generasi selanjutnya.') }}</p>
-            </div>
-
-            <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('i-heroicons-heart')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Kontributor Open Source') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('Developer yang passionate tentang open source dan ingin berkontribusi pada proyek-proyek bermakna.') }}</p>
-            </div>
-
-            <div class="group rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg">
-              <UIcon :name="$t('i-heroicons-light-bulb')" class="mb-3 h-8 w-8 text-primary" />
-              <h3 class="mb-2 text-xl font-semibold text-foreground">{{ $t('Mentor & Advisor') }}</h3>
-              <p class="text-sm text-muted-foreground">{{ $t('Profesional berpengalaman yang memberikan bimbingan dan arahan strategis untuk perkembangan komunitas.') }}</p>
-            </div>
-          </div>
-
-          <div class="mt-12 rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-transparent p-8 text-center">
-            <p class="text-lg text-foreground">
-              {{ $t('Bersama-sama, kita membangun') }} <span class="font-semibold text-primary">{{ $t('masa depan teknologi yang lebih baik') }}</span> <UIcon :name="$t('i-heroicons-heart')" class="inline-block ml-1" />
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- FAQ Section -->
+    <UiFaqSection
+      v-motion
+      :initial="{ opacity: 0, y: 80 }"
+      :visible="{ opacity: 1, y: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :title="$t('Pertanyaan yang Sering Diajukan')"
+      :subtitle="$t('Temukan jawaban untuk pertanyaan umum tentang QINARYAN dan layanan kami')"
+      :badge="$t('FAQ')"
+      :items="faqItems"
+      :show-cta="true"
+      :cta-text="$t('Tidak menemukan jawaban yang Anda cari?')"
+      :cta-button-text="$t('Hubungi Kami')"
+      @cta-click="navigateTo('/#contact')"
+    />
 
     <!-- CTA Section -->
-    <section class="py-20 md:py-32">
-      <div class="container mx-auto px-4">
-        <div class="mx-auto max-w-4xl">
-          <div class="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/10 via-blue-500/5 to-transparent p-12 text-center md:p-16">
-            <!-- Background pattern -->
-            <div
-              class="pointer-events-none absolute inset-0 opacity-10"
-              style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 20px 20px;"
-            />
-
-            <div class="relative">
-              <h2 class="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-                {{ $t('Siap Berkolaborasi?') }}
-              </h2>
-              <p class="mb-8 text-lg text-muted-foreground">
-                {{ $t('Mari bergabung dengan kami dan ciptakan solusi teknologi yang bermakna bersama-sama.') }}
-              </p>
-
-              <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <UButton
-                  size="xl"
-                  color="primary"
-                  @click="navigateTo('/#contact')"
-                >
-                  {{ $t('Hubungi Kami') }}
-                </UButton>
-                <UButton
-                  size="xl"
-                  variant="outline"
-                  to="/about"
-                >
-                  {{ $t('Pelajari Lebih Lanjut') }}
-                </UButton>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <UiCtaSection
+      v-motion
+      :initial="{ opacity: 0, scale: 0.95, y: 50 }"
+      :visible="{ opacity: 1, scale: 1, y: 0, transition: { duration: 600, ease: 'easeOut', delay: 100 } }"
+      :title="$t('Siap Berkolaborasi?')"
+      :description="$t('Mari bergabung dengan kami dan ciptakan solusi teknologi yang bermakna bersama-sama.')"
+      :primary-button-text="$t('Hubungi Kami')"
+      primary-icon="i-lucide-message-circle"
+      :secondary-button-text="$t('Pelajari Lebih Lanjut')"
+      secondary-icon="i-lucide-arrow-right"
+      :show-trust-indicators="true"
+      :trust-text1="$t('Aman & Terpercaya')"
+      :trust-text2="$t('Respon Cepat')"
+      :trust-text3="$t('Open Source')"
+      @primary-click="navigateTo('/#contact')"
+      @secondary-click="navigateTo('/about')"
+    />
   </div>
 </template>
-
-<style scoped>
-/* Additional animations can be added here */
-</style>
