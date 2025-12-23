@@ -7,29 +7,15 @@
     </div>
 
     <div class="container relative mx-auto px-4">
-      <UiSectionHeading
+        <UiSectionHeading
         :title="title"
+        :subtitle="subtitle"
         :badge="badge"
         size="md"
+        :show-line="true"
       />
 
-      <div class="mx-auto max-w-5xl">
-        <!-- Quote -->
-        <UiGlowingEffect
-          :blur="4"
-          :spread="80"
-          :border-width="1"
-          class="mb-12 rounded-2xl"
-        >
-          <div class="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-blue-500/5 p-8 md:p-12">
-            <blockquote class="text-center">
-              <p class="mb-4 text-2xl font-semibold italic text-foreground md:text-3xl">
-                "{{ quote }}"
-              </p>
-            </blockquote>
-          </div>
-        </UiGlowingEffect>
-
+      <div class="mx-auto max-w-6xl">
         <UiBentoGrid :columns="3">
           <UiBentoCard
             v-for="(advantage, index) in advantages"
@@ -46,24 +32,19 @@
 </template>
 
 <script setup lang="ts">
-interface Advantage {
-  title: string
-  description: string
-  icon: string
-  size?: 'normal' | 'large' | 'wide' | 'tall'
-}
+import type { Advantage } from '~/types'
 
 interface Props {
   title?: string
+  subtitle?: string
   badge?: string
-  quote?: string
   advantages?: Advantage[]
 }
 
 withDefaults(defineProps<Props>(), {
   title: 'Mengapa Memilih QINARYAN?',
   badge: 'Keunggulan Kami',
-  quote: 'Teknologi terbaik adalah yang membuat hidup lebih mudah, bukan lebih rumit.',
+  subtitle: 'Keunggulan yang membuat kami berbeda dan dapat diandalkan.',
   advantages: () => [
     {
       title: 'Modern & Up-to-date',

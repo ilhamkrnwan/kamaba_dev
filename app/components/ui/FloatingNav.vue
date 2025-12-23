@@ -1,19 +1,9 @@
 <script setup lang="ts">
 import GlowingEffect from '~/components/ui/GlowingEffect.vue'
+import type { NavItem, LocaleItem } from '~/types'
 
 const mobileMenuOpen = ref(false)
 const { t } = useI18n()
-
-export interface NavItem {
-  name: string
-  link: string
-  icon?: any
-}
-
-export interface LocaleItem {
-  code: string
-  name?: string
-}
 
 interface Props {
   navItems: NavItem[]

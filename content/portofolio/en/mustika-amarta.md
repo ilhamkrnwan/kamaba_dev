@@ -1,75 +1,130 @@
 ---
 title: Mustika Amarta
-description: Aplikasi web untuk manajemen spa dan wellness center dengan booking system terintegrasi
+description: Official landing page website for a Barongan art group from Blora with modern visuals, informative content, and multilingual support
 image: /image.png
-category: Web Application
+category: Website
 services:
-  - Full-Stack Development
-  - System Integration
+  - Web Development
   - UI/UX Design
-client: Mustika Amarta Spa
+  - Landing Page
+client: Mustika Amarta Barongan
 date: 2024-05-20
 status: Completed in 2024
-industry: Wellness & Healthcare
+industry: Arts, Culture & Community
 tags:
-  - Vue.js
-  - Node.js
-  - PostgreSQL
-  - Booking System
+  - Nuxt 4
+  - Nuxt UI v4
+  - Tailwind CSS
+  - i18n
+  - Landing Page
 _path: /portofolio/en/mustika-amarta
 ---
 
 # Mustika Amarta
 
-## Web Application
-## Full-Stack Development
-## System Integration
+**Landing Page for the Barongan Art Group from Blora**
+
+Mustika Amarta is a landing page website designed as a **digital showcase** to introduce the Barongan art group from Blora to a wider audience—both nationally and internationally—through striking visuals and a memorable user experience.
+
+## Services
+- Web Development  
+- UI/UX Design  
+- Landing Page  
 
 ### Project Status
 Completed in 2024
 
 ### Industry
-Wellness & Healthcare
+Arts, Culture & Community
 
 ![Mustika Amarta Preview](/portofolio/mustika-amarta/preview.jpg)
 
-## What Our Client Wants
+---
 
-Development of a comprehensive web platform for spa and wellness center management with an integrated online booking system. The platform needs to streamline operational processes while providing customers with a seamless booking experience.
+## Background & Needs
 
-## The Client's Goals
+The Mustika Amarta art group needed a digital platform that could:
+- Represent the **identity and philosophy of Blora's Barongan art**
+- Serve as the group's official information center
+- Attract younger generations and global audiences
+- Showcase art documentation with strong, modern visuals
 
-### Operational Efficiency
-Automate and streamline spa operations including staff scheduling, room management, and customer tracking.
+This website is focused on **branding**, not operational features.
 
-### Seamless Online Booking
-Provide customers with an easy-to-use online booking system available 24/7.
+---
 
-### Data-Driven Insights
-Generate comprehensive analytics and reports to support business decisions.
+## Development Goals
+
+### Digital Cultural Preservation
+Bring the Barongan art of Blora into a digital format that stays relevant with the times.
+
+### Branding & Visual Identity
+Build a professional, artistic, and easily recognizable image for the art group.
+
+### Global Information Access
+The website can be accessed by audiences across regions and countries through multilingual support (i18n).
+
+---
+
+## Key Features
+
+### Visual Landing Page
+- Hero section with powerful visuals and cultural narrative
+- Flowing storytelling layout
+
+### Art Group Profile
+- History and philosophy of Mustika Amarta
+- Info about members and their roles in performances
+
+### Gallery & Documentation
+- Photos and videos of Barongan performances
+- Immersive and responsive gallery display
+
+### Multilingual (i18n)
+- Support for multiple languages
+- Ready to reach international audiences
+
+### Responsive & Modern UI
+- Optimized for mobile, tablet, and desktop
+- Clean, aesthetic, and consistent design
+
+---
+
+## What We Achieved
+
+### Strong Cultural Representation
+The website successfully conveys the artistic and cultural values of Barongan through visuals and narrative.
+
+### "Wonderful" UI
+A modern interface design with artistic touches that reinforce tradition and aesthetics.
+
+### Global Access
+Content is easily understood by visitors from various language backgrounds.
+
+### Optimal Performance
+Fast loading and smooth navigation thanks to modern web technologies.
+
+---
+
+## Tech Stack
+
+![Nuxt](/tech/nuxt.svg)
+![Tailwind CSS](/tech/tailwind.svg)
+
+- **Nuxt 4**
+- **Nuxt UI v4**
+- **Tailwind CSS**
+- **Vue I18n**
+- SEO Optimization
+
+---
+
+## Visual Documentation
 
 ![Mustika Amarta Mockup 1](/portofolio/mustika-amarta/mockup-1.jpg)
 ![Mustika Amarta Mockup 2](/portofolio/mustika-amarta/mockup-2.jpg)
 ![Mustika Amarta Mockup 3](/portofolio/mustika-amarta/mockup-3.jpg)
 
-## The Results
+---
 
-### 40% Operational Efficiency Increase
-Automated scheduling and management processes reduced manual work significantly.
-
-### Seamless Customer Experience
-Intuitive booking interface with real-time availability and instant confirmation.
-
-### Integrated Payment System
-Secure payment gateway integration enabling smooth transaction processing.
-
-### Comprehensive Analytics
-Detailed dashboards providing insights into business performance and customer behavior.
-
-## What Our Developer Used
-
-![Vue.js](/tech/vue.svg)
-![Node.js](/tech/node.svg)
-![PostgreSQL](/tech/postgresql.svg)
-![Redis](/tech/redis.svg)
-![Tailwind CSS](/tech/tailwind.svg)
+> This website bridges tradition and technology, bringing Blora's iconic Barongan to a broader digital stage.

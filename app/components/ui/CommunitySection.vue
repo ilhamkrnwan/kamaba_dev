@@ -1,14 +1,15 @@
 <template>
   <section class="py-20 md:py-32">
     <div class="container mx-auto px-4">
-      <UiSectionHeading
+        <UiSectionHeading
         :title="title"
         :subtitle="subtitle"
         :badge="badge"
         size="md"
+        :show-line="true"
       />
 
-      <div class="mx-auto max-w-4xl">
+      <div class="mx-auto max-w-6xl">
         <div class="grid gap-6 md:grid-cols-2">
           <UiGlowingEffect
             v-for="(member, index) in members"
@@ -26,23 +27,13 @@
             </div>
           </UiGlowingEffect>
         </div>
-
-        <div class="mt-12 rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-transparent p-8 text-center">
-          <p class="text-lg text-foreground">
-            {{ closingText1 }} <span class="font-semibold text-primary">{{ closingHighlight }}</span> <UIcon name="i-lucide-heart" class="ml-1 inline-block text-red-500" />
-          </p>
-        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-interface Member {
-  icon: string
-  title: string
-  description: string
-}
+import type { Member } from '~/types'
 
 interface Props {
   title?: string
@@ -78,8 +69,6 @@ withDefaults(defineProps<Props>(), {
       title: 'Mentor & Advisor',
       description: 'Profesional berpengalaman yang memberikan bimbingan dan arahan strategis untuk perkembangan komunitas.'
     }
-  ],
-  closingText1: 'Bersama-sama, kita membangun',
-  closingHighlight: 'masa depan teknologi yang lebih baik'
+  ]
 })
 </script>

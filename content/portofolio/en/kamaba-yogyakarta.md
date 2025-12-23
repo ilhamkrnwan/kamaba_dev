@@ -1,28 +1,37 @@
 ---
 title: Kamaba Yogyakarta
-description: Website profile Kamaba Yogyakarta dengan sistem manajemen konten modern
+description: A web-based organization information system for Kamaba Yogyakarta featuring member management, events, news, and an integrated dashboard
 image: /image.png
 category: Website
 services:
   - Web Development
   - UI/UX Design
+  - System Information
 client: Kamaba Yogyakarta
 date: 2024-03-15
 status: Completed in 2024
 industry: Education & Organization
 tags:
-  - Nuxt 3
-  - Vue.js
+  - Nuxt 4
+  - Vue
   - Tailwind CSS
+  - Shadcn UI
+  - Nuxt UI v4
+  - MySQL
   - CMS
 _path: /portofolio/en/kamaba-yogyakarta
 ---
 
 # Kamaba Yogyakarta
 
-## Website
-## Web Development
-## UI/UX Design
+**Web-Based Organization Information System**
+
+The Kamaba Yogyakarta website was built as a **centralized digital platform** to manage organizational info, membership, activities, and both internal and external communications in a modern, secure, and user-friendly way.
+
+## Services
+- Web Development  
+- UI/UX Design  
+- Organization Information System  
 
 ### Project Status
 Completed in 2024
@@ -32,42 +41,112 @@ Education & Organization
 
 ![Kamaba Yogyakarta Preview](/portofolio/kamaba-yogyakarta/preview.jpg)
 
-## What Our Client Wants
+---
 
-Development of a modern profile website for Kamaba Yogyakarta that showcases comprehensive information about the organization, activities, and services available. The website needs to be easily manageable by the team and provide an excellent user experience across all devices.
+## Client Needs & Challenges
 
-## The Client's Goals
+Kamaba Yogyakarta needed a digital system that goes beyond just a profile website. They wanted something that could:
 
-### Modern Online Presence
-Create a professional and modern website that represents Kamaba Yogyakarta's values and mission.
+- Manage **member and board data** in a structured way  
+- Provide **up-to-date event and news info**  
+- Make it easy for admins to **manage content without technical skills**  
+- Serve as the official information hub for members and the public  
 
-### Easy Content Management
-Provide an intuitive content management system for regular updates without technical knowledge.
+---
+
+## Development Goals
+
+### Organization Digitalization
+Build an information system that truly represents Kamaba Yogyakarta's identity, vision, and professionalism.
+
+### Centralized Data Management
+Integrate member data, events, news, and org structure into one secure and controlled system.
 
 ### Optimal User Experience
-Deliver a fast, responsive, and SEO-optimized website that reaches wider audiences.
+A modern, responsive, fast, and easy-to-use interface across all devices.
+
+---
+
+## Key Features
+
+### Authentication & User Management
+- Member registration & login
+- Role management (Admin, Board, Member)
+- User profile management
+
+### Membership Management
+- Centralized member data
+- Membership details & history
+- Member activation and deactivation
+
+### Organization Structure
+- Visual org chart display
+- Position & division management
+- Board history per period
+
+### Events & Activities
+- Organization event calendar
+- Member event registration
+- Event documentation and archives
+
+### News & Articles
+- Organization news publication
+- Article categories & details
+- Dynamic content-based CMS
+
+### Gallery
+- Photo albums of events
+- Responsive gallery display
+- Lightbox for media preview
+
+### Admin Dashboard
+- Member & activity statistics
+- Quick actions for data management
+- Key information summary
+
+---
+
+## What We Achieved
+
+### Integrated System
+All organizational needs are managed in one consistent platform that's easy to expand.
+
+### Modern & Responsive Design
+Using a modern UI approach with a clean and intuitive user experience.
+
+### Performance & Security
+Fast, stable, and built with modern web security standards.
+
+### Scalable for the Future
+Modular and scalable code structure for long-term needs.
+
+---
+
+## Tech Stack
+
+### Frontend
+![Nuxt](/tech/nuxt.svg)
+![Vue](/tech/vue.svg)
+![Tailwind CSS](/tech/tailwind.svg)
+
+- **Nuxt 4**
+- **Nuxt UI v4**
+- **Shadcn UI**
+- **Tailwind CSS**
+
+### Backend & Database
+- **MySQL**
+- REST API
+- Role Based Access Control (RBAC)
+
+---
+
+## Visual Documentation
 
 ![Kamaba Yogyakarta Mockup 1](/portofolio/kamaba-yogyakarta/mockup-1.jpg)
 ![Kamaba Yogyakarta Mockup 2](/portofolio/kamaba-yogyakarta/mockup-2.jpg)
 ![Kamaba Yogyakarta Mockup 3](/portofolio/kamaba-yogyakarta/mockup-3.jpg)
 
-## The Results
+---
 
-### Content Management System
-Easy-to-use CMS allowing the team to update content independently without developer assistance.
-
-### Responsive Design
-Optimal viewing experience across all devices, from mobile phones to desktop computers.
-
-### Fast Performance
-Lightning-fast loading times with optimized assets and modern web technologies.
-
-### SEO Optimized
-Search engine friendly structure increasing online visibility and organic reach.
-
-## What Our Developer Used
-
-![Nuxt 3](/tech/nuxt.svg)
-![Vue.js](/tech/vue.svg)
-![Tailwind CSS](/tech/tailwind.svg)
-![Nuxt Content](/tech/nuxt-content.svg)
+> This website is designed as the digital foundation for Kamaba Yogyakarta, ready to scale up in the future.

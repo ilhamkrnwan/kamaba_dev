@@ -5,11 +5,8 @@
   type UseFetchOptions,
 } from "nuxt/app";
 import ROUTES from "../constants/routes";
-interface ApiError {
-  status: number;
-  message: string;
-  data?: any;
-}
+import type { ApiError } from "~/types";
+
 const handleApiError = (response: any) => {
   const error: ApiError = {
     status: response.status,

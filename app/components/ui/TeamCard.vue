@@ -97,13 +97,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { cn } from '../../utils/cn'
-
-interface Socials {
-  github?: string
-  linkedin?: string
-  twitter?: string
-  website?: string
-}
+import type { Socials } from '~/types'
 
 interface Props {
   name: string

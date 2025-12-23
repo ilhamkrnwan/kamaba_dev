@@ -1,78 +1,135 @@
 ---
 title: Wicara Space
-description: Platform kolaborasi dan komunikasi untuk tim remote dengan fitur video conference dan project management
+description: A blog website and article publishing platform for Blora students with a modern writing system and centralized content management
 image: /image.png
-category: SaaS Platform
+category: Website
 services:
-  - Full-Stack Development
-  - Real-time Systems
+  - Web Development
   - UI/UX Design
-client: Wicara Space Inc.
+  - CMS Development
+client: Blora Student Community
 date: 2024-08-10
 status: Completed in 2024
-industry: Technology & Collaboration
+industry: Education & Community
 tags:
-  - React
-  - Next.js
-  - WebRTC
-  - Real-time
-  - TypeScript
+  - Nuxt 4
+  - Nuxt UI
+  - Shadcn UI
+  - Tailwind CSS
+  - MySQL
+  - CMS
 _path: /portofolio/en/wicara-space
 ---
 
 # Wicara Space
 
-## SaaS Platform
-## Full-Stack Development
-## Real-time Systems
+**Blog & Article Publishing Platform for Blora Students**
+
+Wicara Space is a blog website designed as a **space for expression and idea sharing** among Blora students. This platform lets students write, manage, and publish articles independently with a modern look and a comfortable writing experience.
+
+## Services
+- Web Development  
+- UI/UX Design  
+- CMS Development  
 
 ### Project Status
 Completed in 2024
 
 ### Industry
-Technology & Collaboration
+Education & Community
 
 ![Wicara Space Preview](/portofolio/wicara-space/preview.jpg)
 
-## What Our Client Wants
+---
 
-Development of a modern workspace collaboration platform that combines video conferencing, real-time chat, and project management in one integrated application. The platform needs to support remote teams with reliable, high-quality communication tools.
+## Background & Needs
 
-## The Client's Goals
+Blora students needed a digital platform that:
+- Provides an **official space to write articles and opinions**
+- Is easy to use for non-technical writers
+- Displays content in a clean, fast, and SEO-friendly way
+- Supports managing writers and articles in one system
 
-### All-in-One Collaboration
-Provide a unified platform that eliminates the need for multiple separate tools.
+Wicara Space was developed as a **community blog platform**, not a social media.
 
-### High-Quality Communication
-Deliver crystal-clear video and audio with minimal latency for seamless remote meetings.
+---
 
-### Scalable Architecture
-Build a system that can grow from small teams to enterprise-level organizations.
+## Development Goals
+
+### A Space for Student Expression
+Give students a safe and professional space to share ideas, opinions, and written works.
+
+### Structured Publishing
+Provide a well-organized, easy-to-manage article management system.
+
+### Wide Information Access
+Content can be accessed by the public as a reference and archive of Blora students' thoughts.
+
+---
+
+## Key Features
+
+### Article Management
+- Write, edit, and delete articles
+- Draft & publish workflow
+- Article categories and tags
+
+### Writer Management
+- Multi-author support
+- Writer profiles
+- Role-based access (Admin & Writer)
+
+### Modern Blog Layout
+- Clean and comfortable reading layout
+- Reader-friendly typography
+- Featured article highlights
+
+### Centralized CMS
+- Admin dashboard for content management
+- Organized data structure
+
+### Responsive & SEO Friendly
+- Optimized for all devices
+- SEO-ready structure for search engine indexing
+
+---
+
+## What We Achieved
+
+### Trusted Publication Platform
+Wicara Space has become the official channel for Blora student article publications.
+
+### Comfortable Writing Experience
+A simple interface that helps writers focus on their content.
+
+### Fast Performance
+Lightweight blog pages that load quickly even with lots of articles.
+
+### Ready for Growth
+System structure is ready to expand with advanced features in the future.
+
+---
+
+## Tech Stack
+
+![Nuxt](/tech/nuxt.svg)
+![Tailwind CSS](/tech/tailwind.svg)
+
+- **Nuxt 4**
+- **Nuxt UI**
+- **Shadcn UI**
+- **Tailwind CSS**
+- **MySQL**
+- Custom CMS
+
+---
+
+## Visual Documentation
 
 ![Wicara Space Mockup 1](/portofolio/wicara-space/mockup-1.jpg)
 ![Wicara Space Mockup 2](/portofolio/wicara-space/mockup-2.jpg)
 ![Wicara Space Mockup 3](/portofolio/wicara-space/mockup-3.jpg)
 
-## The Results
+---
 
-### 10,000+ Active Users
-Successfully serving thousands of users across different organizations and teams.
-
-### 99.9% Uptime
-Reliable infrastructure ensuring consistent availability for critical business communications.
-
-### Sub-100ms Response Time
-Lightning-fast real-time features providing smooth user experience.
-
-### Integrated Collaboration
-Seamless integration of video, chat, and project management reducing tool switching.
-
-## What Our Developer Used
-
-![Next.js](/tech/nextjs.svg)
-![TypeScript](/tech/typescript.svg)
-![WebRTC](/tech/webrtc.svg)
-![Socket.io](/tech/socketio.svg)
-![PostgreSQL](/tech/postgresql.svg)
-![Redis](/tech/redis.svg)
-![Tailwind CSS](/tech/tailwind.svg)
+> Wicara Space is here as a digital space where Blora students' ideas can grow, be documented, and read across generations.

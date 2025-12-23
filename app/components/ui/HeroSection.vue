@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useColorMode } from '#imports'
-
-interface Stat {
-  value: string
-  label: string
-  description: string
-}
+import type { Stat } from '~/types'
 
 interface Props {
   title: string
@@ -39,7 +34,7 @@ const onSecondaryAction = () => emit('secondaryAction')
 </script>
 
 <template>
-  <div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden ">
+  <section class="relative flex min-h-screen w-full flex-col items-center justify-center">
     <!-- Spotlight effects -->
     <UiSpotlight
       class="-top-40 left-0 md:-top-20 md:left-60"
@@ -51,7 +46,7 @@ const onSecondaryAction = () => emit('secondaryAction')
     />
 
     <!-- Content -->
-    <div class="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-6 py-24 animate-fade-in-up">
+    <div class="relative z-10 mx-auto w-full max-w-6xl px-4 md:px-6 py-24 animate-fade-in-up">
       <div class="text-center">
         <!-- Badge -->
         <div class="mb-8 inline-flex items-center rounded-full border border-border bg-card px-4 py-1.5 text-sm">
@@ -133,7 +128,7 @@ const onSecondaryAction = () => emit('secondaryAction')
         </svg>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

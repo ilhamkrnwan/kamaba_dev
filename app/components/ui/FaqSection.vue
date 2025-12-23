@@ -1,15 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-
-interface FaqItem {
-  question: string
-  answer: string
-  icon?: string
-  link?: {
-    text: string
-    url: string
-  }
-}
+import type { FaqItem } from '~/types'
 
 interface Props {
   title?: string

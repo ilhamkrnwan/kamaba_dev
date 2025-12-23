@@ -1,78 +1,135 @@
 ---
 title: Wicara Space
-description: Platform kolaborasi dan komunikasi untuk tim remote dengan fitur video conference dan project management
+description: Website blog dan platform publikasi artikel untuk mahasiswa Blora dengan sistem penulisan modern dan manajemen konten terpusat
 image: /image.png
-category: SaaS Platform
+category: Website
 services:
-  - Full-Stack Development
-  - Real-time Systems
+  - Web Development
   - UI/UX Design
-client: Wicara Space Inc.
+  - CMS Development
+client: Komunitas Mahasiswa Blora
 date: 2024-08-10
 status: Selesai pada 2024
-industry: Teknologi & Kolaborasi
+industry: Pendidikan & Komunitas
 tags:
-  - React
-  - Next.js
-  - WebRTC
-  - Real-time
-  - TypeScript
+  - Nuxt 4
+  - Nuxt UI
+  - Shadcn UI
+  - Tailwind CSS
+  - MySQL
+  - CMS
 _path: /portofolio/id/wicara-space
 ---
 
 # Wicara Space
 
-## SaaS Platform
-## Full-Stack Development
-## Real-time Systems
+**Platform Blog & Publikasi Artikel Mahasiswa Blora**
+
+Wicara Space adalah website blog yang dirancang sebagai **ruang berekspresi dan berbagi gagasan** bagi mahasiswa Blora. Platform ini memungkinkan mahasiswa menulis, mengelola, dan mempublikasikan artikel secara mandiri dengan tampilan modern dan pengalaman menulis yang nyaman.
+
+## Layanan
+- Web Development  
+- UI/UX Design  
+- CMS Development  
 
 ### Status Proyek
 Selesai pada 2024
 
 ### Industri
-Teknologi & Kolaborasi
+Pendidikan & Komunitas
 
 ![Wicara Space Preview](/portofolio/wicara-space/preview.jpg)
 
-## Yang Klien Kami Inginkan
+---
 
-Pengembangan platform kolaborasi workspace modern yang menggabungkan video conference, chat real-time, dan project management dalam satu aplikasi terintegrasi. Platform ini perlu mendukung tim remote dengan alat komunikasi yang handal dan berkualitas tinggi.
+## Kebutuhan & Latar Belakang
 
-## Tujuan Klien
+Mahasiswa Blora membutuhkan media digital yang:
+- Menjadi **wadah resmi untuk menulis artikel dan opini**
+- Mudah digunakan oleh penulis non-teknis
+- Menampilkan konten secara rapi, cepat, dan SEO-friendly
+- Mendukung pengelolaan penulis dan artikel dalam satu sistem
 
-### Kolaborasi All-in-One
-Menyediakan platform terpadu yang menghilangkan kebutuhan akan berbagai alat terpisah.
+Wicara Space dikembangkan sebagai **platform blog komunitas**, bukan media sosial.
 
-### Komunikasi Berkualitas Tinggi
-Menghadirkan video dan audio yang jernih dengan latensi minimal untuk meeting remote yang mulus.
+---
 
-### Arsitektur Skalabel
-Membangun sistem yang dapat berkembang dari tim kecil hingga organisasi tingkat enterprise.
+## Tujuan Pengembangan
+
+### Ruang Ekspresi Mahasiswa
+Memberikan ruang aman dan profesional bagi mahasiswa untuk menuangkan ide, opini, dan karya tulis.
+
+### Publikasi Terstruktur
+Menghadirkan sistem manajemen artikel yang rapi, terorganisir, dan mudah dikelola.
+
+### Akses Informasi Luas
+Konten dapat diakses oleh publik sebagai referensi dan arsip pemikiran mahasiswa Blora.
+
+---
+
+## Fitur Utama Platform
+
+### Manajemen Artikel
+- Tulis, edit, dan hapus artikel
+- Draft & publish workflow
+- Kategori dan tag artikel
+
+### Manajemen Penulis
+- Multi-author support
+- Profil penulis
+- Hak akses berbasis role (Admin & Penulis)
+
+### Tampilan Blog Modern
+- Layout bersih dan nyaman dibaca
+- Tipografi ramah pembaca
+- Highlight artikel unggulan
+
+### CMS Terpusat
+- Dashboard admin untuk kelola konten
+- Struktur data terorganisir
+
+### Responsif & SEO Friendly
+- Optimal di semua perangkat
+- Struktur SEO siap indexing mesin pencari
+
+---
+
+## Hasil yang Dicapai
+
+### Media Publikasi Terpercaya
+Wicara Space menjadi kanal resmi publikasi artikel mahasiswa Blora.
+
+### Pengalaman Menulis Nyaman
+Antarmuka sederhana memudahkan penulis fokus pada konten.
+
+### Performa Cepat
+Halaman blog ringan dan cepat diakses meski banyak artikel.
+
+### Mudah Dikembangkan
+Struktur sistem siap dikembangkan ke fitur lanjutan di masa depan.
+
+---
+
+## Teknologi yang Digunakan
+
+![Nuxt](/tech/nuxt.svg)
+![Tailwind CSS](/tech/tailwind.svg)
+
+- **Nuxt 4**
+- **Nuxt UI**
+- **Shadcn UI**
+- **Tailwind CSS**
+- **MySQL**
+- CMS Custom
+
+---
+
+## Dokumentasi Visual
 
 ![Wicara Space Mockup 1](/portofolio/wicara-space/mockup-1.jpg)
 ![Wicara Space Mockup 2](/portofolio/wicara-space/mockup-2.jpg)
 ![Wicara Space Mockup 3](/portofolio/wicara-space/mockup-3.jpg)
 
-## Hasil yang Dicapai
+---
 
-### 10,000+ Pengguna Aktif
-Berhasil melayani ribuan pengguna di berbagai organisasi dan tim.
-
-### Uptime 99.9%
-Infrastruktur handal memastikan ketersediaan konsisten untuk komunikasi bisnis kritis.
-
-### Response Time di Bawah 100ms
-Fitur real-time super cepat memberikan pengalaman pengguna yang mulus.
-
-### Kolaborasi Terintegrasi
-Integrasi mulus dari video, chat, dan project management mengurangi perpindahan antar tool.
-
-## Teknologi yang Developer Kami Gunakan
-
-![Next.js](/tech/nextjs.svg)
-![TypeScript](/tech/typescript.svg)
-![WebRTC](/tech/webrtc.svg)
-![Socket.io](/tech/socketio.svg)
-![PostgreSQL](/tech/postgresql.svg)
-![Redis](/tech/redis.svg)
-![Tailwind CSS](/tech/tailwind.svg)
+> Wicara Space hadir sebagai ruang digital tempat gagasan mahasiswa Blora tumbuh, terdokumentasi, dan dapat dibaca lintas generasi.

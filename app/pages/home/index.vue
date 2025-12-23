@@ -1,13 +1,53 @@
 <script lang="ts" setup>
+import type { 
+  HeroStat, 
+  Feature, 
+  Advantage, 
+  Member, 
+  Testimonial, 
+  FaqItem 
+} from '~/types'
+
+// ============================================
+// Composables
+// ============================================
 const { t } = useI18n()
 
+// ============================================
+// SEO Meta
+// ============================================
 useSeoMeta({
   title: t('QINARYAN - Berkarya dengan Teknologi'),
   description: t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.'),
 })
 
-// Hero Stats
-const heroStats = computed(() => [
+// ============================================
+// Animation Configurations
+// ============================================
+const fadeInUp = {
+  initial: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 600, ease: 'easeOut' } }
+}
+
+const fadeInUpDelayed = (delay: number = 100) => ({
+  initial: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 700, ease: 'easeOut', delay } }
+})
+
+const fadeInScale = {
+  initial: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 600, ease: 'easeOut', delay: 100 } }
+}
+
+const fadeInScaleUp = {
+  initial: { opacity: 0, scale: 0.95, y: 50 },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 600, ease: 'easeOut', delay: 100 } }
+}
+
+// ============================================
+// Hero Section Data
+// ============================================
+const heroStats = computed<HeroStat[]>(() => [
   {
     value: t('20+'),
     label: t('Proyek'),
@@ -25,41 +65,45 @@ const heroStats = computed(() => [
   }
 ])
 
-// Focus Areas
-const focusAreas = computed(() => [
+// ============================================
+// Focus Areas Data
+// ============================================
+const focusAreas = computed<Feature[]>(() => [
   {
     icon: 'i-lucide-globe',
     title: t('Website Development'),
     description: t('Membangun website modern, responsif, dan user-friendly untuk berbagai kebutuhan bisnis dan organisasi.'),
-    tags: 'Vue.js, Nuxt, React, Next.js'
+    tags: t('Vue.js, Nuxt, React, Next.js')
   },
   {
     icon: 'i-lucide-smartphone',
     title: t('Mobile Development'),
     description: t('Mengembangkan aplikasi mobile native dan cross-platform yang powerful dan intuitif.'),
-    tags: 'React Native, Flutter, Ionic'
+    tags: t('React Native, Flutter, Ionic')
   },
   {
     icon: 'i-lucide-graduation-cap',
     title: t('E-Learning Solutions'),
     description: t('Platform pembelajaran digital yang interaktif untuk meningkatkan pengalaman belajar mengajar.'),
-    tags: 'LMS, Interactive Content, Gamification'
+    tags: t('LMS, Interactive Content, Gamification')
   },
   {
     icon: 'i-lucide-users',
     title: t('Collaborative Tools'),
     description: t('Sistem manajemen dan kolaborasi untuk meningkatkan produktivitas tim dan organisasi.'),
-    tags: 'Project Management, Communication, Automation'
+    tags: t('Project Management, Communication, Automation')
   }
 ])
 
-// Why Us Advantages
-const advantages = computed(() => [
+// ============================================
+// Advantages Data
+// ============================================
+const advantages = computed<Advantage[]>(() => [
   {
     title: t('Modern & Up-to-date'),
     description: t('Menggunakan teknologi terkini dan best practices dalam setiap proyek yang kami kerjakan.'),
     icon: 'i-lucide-sparkles',
-    size: 'large' as const
+    size: 'large'
   },
   {
     title: t('Open Source'),
@@ -80,12 +124,14 @@ const advantages = computed(() => [
     title: t('Berkelanjutan'),
     description: t('Fokus pada solusi jangka panjang yang scalable dan mudah dimaintain.'),
     icon: 'i-lucide-trending-up',
-    size: 'wide' as const
+    size: 'wide'
   }
 ])
 
-// Community Members
-const communityMembers = computed(() => [
+// ============================================
+// Community Members Data
+// ============================================
+const communityMembers = computed<Member[]>(() => [
   {
     icon: 'i-lucide-graduation-cap',
     title: t('Mahasiswa Aktif'),
@@ -108,8 +154,10 @@ const communityMembers = computed(() => [
   }
 ])
 
-// Testimonials
-const testimonials = computed(() => [
+// ============================================
+// Testimonials Data
+// ============================================
+const testimonials = computed<Testimonial[]>(() => [
   {
     id: 1,
     quote: t('QINARYAN memberikan kinerja terbaiknya dalam membuat Website! Sangat profesional dan hasil memuaskan.'),
@@ -136,8 +184,10 @@ const testimonials = computed(() => [
   }
 ])
 
-// FAQ Items
-const faqItems = computed(() => [
+// ============================================
+// FAQ Data
+// ============================================
+const faqItems = computed<FaqItem[]>(() => [
   {
     question: t('Apa itu QINARYAN?'),
     answer: t('QINARYAN adalah komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat. Kami berkomitmen pada prinsip open source dan kolaborasi.'),
@@ -163,7 +213,7 @@ const faqItems = computed(() => [
     icon: 'i-lucide-code-2',
     link: {
       text: t('Lihat portofolio kami'),
-      url: '/portfolio'
+      url: '/portofolio'
     }
   },
   {
@@ -181,15 +231,23 @@ const faqItems = computed(() => [
     }
   }
 ])
+
+// ============================================
+// Event Handlers
+// ============================================
+const handleContactClick = () => navigateTo('/home#contact')
+const handleLearnMoreClick = () => navigateTo('/about')
+const handlePortfolioClick = () => navigateTo('/portofolio')
+const handleCollaborateClick = () => navigateTo('/home#contact')
 </script>
 
 <template>
-  <div class="min-h-screen">
+  <div class="w-full">
     <!-- Hero Section -->
     <UiHeroSection
       v-motion
-      :initial="{ opacity: 0, y: -50 }"
-      :visible="{ opacity: 1, y: 0, transition: { duration: 600, ease: 'easeOut' } }"
+      :initial="fadeInUp.initial"
+      :visible="fadeInUp.visible"
       :title="$t('QINARYAN')"
       :subtitle="$t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.')"
       :badge="$t('Terbuka untuk pekerjaan')"
@@ -197,31 +255,37 @@ const faqItems = computed(() => [
       :secondary-button="$t('Mari Berkolaborasi!')"
       :stats="heroStats"
       class="font-['Baumans']"
-      @primary-action="navigateTo('/portfolio')"
-      @secondary-action="navigateTo('/#contact')"
+      @primary-action="handlePortfolioClick"
+      @secondary-action="handleCollaborateClick"
+    />
+
+    <!-- Partners Logo Carousel -->
+    <UiInfiniteLogoCarousel
+      v-motion
+      :initial="fadeInUpDelayed(100).initial"
+      :visible="fadeInUpDelayed(100).visible"
+      :title="$t('Mitra Kami')"
+      :badge="$t('Dipercaya Oleh')"
+      :speed="25"
+      :pause-on-hover="true"
     />
 
     <!-- About Section -->
     <UiAboutSection
       v-motion
-      :initial="{ opacity: 0, y: 80 }"
-      :visible="{ opacity: 1, y: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :initial="fadeInUpDelayed(150).initial"
+      :visible="fadeInUpDelayed(150).visible"
       :title="$t('Tentang QINARYAN')"
-      :subtitle="$t('Kami adalah komunitas pengembang digital yang berkomitmen untuk menciptakan solusi teknologi inovatif dan berkelanjutan bagi pendidikan, organisasi, dan masyarakat luas.')"
-      :badge="$t('Siapa Kami')"
-      :intro-text1="$t('QINARYAN dimulai dari')"
-      :highlight-text1="$t('visi sederhana')"
-      :intro-text2="$t(': menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat.')"
-      :belief-text1="$t('Kami percaya bahwa')"
-      :highlight-text2="$t('teknologi harus mudah diakses, transparan, dan memberdayakan')"
-      :belief-text2="$t(', bukan memperumit.')"
+      :subtitle="$t('QINARYAN dimulai dari visi sederhana: menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat. Kami percaya bahwa teknologi harus mudah diakses, transparan, dan memberdayakan.')"
+      :cta-text="$t('Lihat Karya Kami')"
+      :services-title="$t('Apa Yang Kami Lakukan')"
     />
 
     <!-- Focus Areas Section -->
     <UiFocusAreasSection
       v-motion
-      :initial="{ opacity: 0, x: -100 }"
-      :visible="{ opacity: 1, x: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :initial="fadeInUpDelayed(100).initial"
+      :visible="fadeInUpDelayed(100).visible"
       :title="$t('Area Fokus Kami')"
       :subtitle="$t('Kami mengkhususkan diri dalam berbagai bidang teknologi untuk memberikan solusi terbaik')"
       :badge="$t('Keahlian')"
@@ -231,8 +295,8 @@ const faqItems = computed(() => [
     <!-- Why Us Section -->
     <UiWhyUsSection
       v-motion
-      :initial="{ opacity: 0, x: 100 }"
-      :visible="{ opacity: 1, x: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :initial="fadeInUpDelayed(100).initial"
+      :visible="fadeInUpDelayed(100).visible"
       :title="$t('Mengapa Memilih QINARYAN?')"
       :badge="$t('Keunggulan Kami')"
       :quote="$t('Teknologi terbaik adalah yang membuat hidup lebih mudah, bukan lebih rumit.')"
@@ -242,8 +306,8 @@ const faqItems = computed(() => [
     <!-- Community Section -->
     <UiCommunitySection
       v-motion
-      :initial="{ opacity: 0, scale: 0.9 }"
-      :visible="{ opacity: 1, scale: 1, transition: { duration: 600, ease: 'easeOut', delay: 100 } }"
+      :initial="fadeInScale.initial"
+      :visible="fadeInScale.visible"
       :title="$t('Siapa Saja yang Ada di QINARYAN?')"
       :subtitle="$t('Komunitas kami terdiri dari berbagai latar belakang yang bekerja sama untuk tujuan yang sama')"
       :badge="$t('Komunitas')"
@@ -255,8 +319,8 @@ const faqItems = computed(() => [
     <!-- Testimonial Section -->
     <UiTestimonialSection
       v-motion
-      :initial="{ opacity: 0, y: 80 }"
-      :visible="{ opacity: 1, y: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :initial="fadeInUpDelayed(100).initial"
+      :visible="fadeInUpDelayed(100).visible"
       :title="$t('Apa Kata Klien Kami')"
       :subtitle="$t('Dengarkan pengalaman mereka yang telah bekerja sama dengan kami')"
       :badge="$t('Testimoni')"
@@ -268,8 +332,8 @@ const faqItems = computed(() => [
     <!-- FAQ Section -->
     <UiFaqSection
       v-motion
-      :initial="{ opacity: 0, y: 80 }"
-      :visible="{ opacity: 1, y: 0, transition: { duration: 700, ease: 'easeOut', delay: 100 } }"
+      :initial="fadeInUpDelayed(100).initial"
+      :visible="fadeInUpDelayed(100).visible"
       :title="$t('Pertanyaan yang Sering Diajukan')"
       :subtitle="$t('Temukan jawaban untuk pertanyaan umum tentang QINARYAN dan layanan kami')"
       :badge="$t('FAQ')"
@@ -277,26 +341,29 @@ const faqItems = computed(() => [
       :show-cta="true"
       :cta-text="$t('Tidak menemukan jawaban yang Anda cari?')"
       :cta-button-text="$t('Hubungi Kami')"
-      @cta-click="navigateTo('/#contact')"
+      @cta-click="handleContactClick"
     />
 
     <!-- CTA Section -->
     <UiCtaSection
+      id="contact"
       v-motion
-      :initial="{ opacity: 0, scale: 0.95, y: 50 }"
-      :visible="{ opacity: 1, scale: 1, y: 0, transition: { duration: 600, ease: 'easeOut', delay: 100 } }"
-      :title="$t('Siap Berkolaborasi?')"
-      :description="$t('Mari bergabung dengan kami dan ciptakan solusi teknologi yang bermakna bersama-sama.')"
+      :initial="fadeInScaleUp.initial"
+      :visible="fadeInScaleUp.visible"
+      :title="$t('Tertarik dengan Hasil Karya Kami?')"
+      :description="$t('Mari diskusikan proyek Anda bersama kami. Kami siap membantu mewujudkan ide-ide inovatif Anda.')"
+      :badge="$t('Mari Berkolaborasi')"
+      badge-icon="i-lucide-sparkles"
       :primary-button-text="$t('Hubungi Kami')"
       primary-icon="i-lucide-message-circle"
       :secondary-button-text="$t('Pelajari Lebih Lanjut')"
       secondary-icon="i-lucide-arrow-right"
       :show-trust-indicators="true"
-      :trust-text1="$t('Aman & Terpercaya')"
+      :trust-text1="$t('Konsultasi Gratis')"
       :trust-text2="$t('Respon Cepat')"
-      :trust-text3="$t('Open Source')"
-      @primary-click="navigateTo('/#contact')"
-      @secondary-click="navigateTo('/about')"
+      :trust-text3="$t('Harga Kompetitif')"
+      @primary-click="handleContactClick"
+      @secondary-click="handleLearnMoreClick"
     />
   </div>
 </template>

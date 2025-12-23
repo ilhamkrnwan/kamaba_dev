@@ -1,14 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-
-interface Testimonial {
-  id: number
-  quote: string
-  name: string
-  position: string
-  rating: string
-  image: string
-}
+import type { Testimonial } from '~/types'
 
 interface Props {
   title?: string
@@ -108,6 +100,7 @@ onUnmounted(() => {
         :title="title"
         :subtitle="subtitle"
         :badge="badge"
+        :show-line="true"
         size="md"
       />
 

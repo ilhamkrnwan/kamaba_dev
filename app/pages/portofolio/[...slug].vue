@@ -1,3 +1,10 @@
+<!--
+  Portfolio Detail Page
+  - Hero + sidebar layout, responsive grid
+  - Use bg-linear-to-br for gradients, aspect-4/3 for images
+  - Components: ProjectHero, ProjectMeta, ProjectGallery, ProjectNavigation
+  - SEO: dynamic meta, Open Graph, structured data
+-->
 <script setup lang="ts">
 const route = useRoute()
 const { locale } = useI18n()
@@ -17,11 +24,9 @@ const { data: page } = await useAsyncData(
 </script>
 
 <template>
-<main class="prose mx-auto py-10">
+<main class="prose mx-auto max-w-6xl px-4 py-10">
 <h1>{{ page?.title }}</h1>
 <p class="text-gray-500">{{ page?.description }}</p>
-
-
 <ContentRenderer v-if="page" :value="page" />
 </main>
 </template>
