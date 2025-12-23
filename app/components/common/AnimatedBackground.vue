@@ -34,17 +34,6 @@
       class="absolute left-1/2 top-1/2 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-radial from-[#2c3e5f]/12 via-[#8b2f39]/6 to-transparent blur-2xl dark:from-[#2c3e5f]/10 dark:via-[#8b2f39]/5"
     />
 
-    <!-- Animated Floating Orbs -->
-    <div
-      class="animate-float-slow absolute left-1/4 top-1/3 h-2.5 w-2.5 rounded-full bg-[#2c3e5f]/50 blur-sm dark:bg-[#2c3e5f]/35"
-    />
-    <div
-      class="animate-float-medium absolute right-1/3 top-1/4 h-3 w-3 rounded-full bg-[#8b2f39]/45 blur-sm dark:bg-[#8b2f39]/30"
-    />
-    <div
-      class="animate-float-fast absolute bottom-1/3 left-1/3 h-2.5 w-2.5 rounded-full bg-[#2c3e5f]/45 blur-sm dark:bg-[#2c3e5f]/30"
-    />
-
     <!-- Top gradient fade -->
     <div
       class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white via-white/80 to-transparent dark:from-gray-950 dark:via-gray-950/80"
