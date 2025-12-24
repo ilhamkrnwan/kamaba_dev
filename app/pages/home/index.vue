@@ -155,6 +155,68 @@ const communityMembers = computed<Member[]>(() => [
 ])
 
 // ============================================
+// Team Members Data
+// ============================================
+const teamMembers = computed(() => [
+  {
+    id: 1,
+    name: 'Ilham Kurniawan',
+    role: t('Founder & Lead Developer'),
+    profileImage: '/team/ilham-profile.png',
+    revealImage: '/team/ilham-reveal.png',
+    socials: {
+      github: 'https://github.com/ilhamkurniawan',
+      linkedin: 'https://linkedin.com/in/ilhamkurniawan',
+      instagram: 'https://instagram.com/ilhamkurniawan'
+    }
+  },
+  {
+    id: 2,
+    name: 'Khairul Anam',
+    role: t('Full Stack Developer'),
+    profileImage: '/team/khairul-profile.png',
+    revealImage: '/team/khairul-reveal.png',
+    socials: {
+      github: 'https://github.com/khairulanam',
+      linkedin: 'https://linkedin.com/in/khairulanam'
+    }
+  },
+  {
+    id: 3,
+    name: 'Muhammad Irham',
+    role: t('UI/UX Designer'),
+    profileImage: '/team/irham-profile.png',
+    revealImage: '/team/irham-reveal.png',
+    socials: {
+      instagram: 'https://instagram.com/muhammadirham',
+      linkedin: 'https://linkedin.com/in/muhammadirham'
+    }
+  },
+  {
+    id: 4,
+    name: 'Asyifa Nur Sholihah',
+    role: t('Project Manager'),
+    profileImage: '/team/asyifa-profile.png',
+    revealImage: '/team/asyifa-reveal.png',
+    socials: {
+      linkedin: 'https://linkedin.com/in/asyifanursholihah',
+      instagram: 'https://instagram.com/asyifanursholihah'
+    }
+  },
+  {
+    id: 5,
+    name: 'Prasetyo Bambang',
+    role: t('Backend Developer'),
+    profileImage: '/team/prasetyo-profile.png',
+    revealImage: '/team/prasetyo-reveal.png',
+    socials: {
+      github: 'https://github.com/prasetyobambang',
+      linkedin: 'https://linkedin.com/in/prasetyobambang'
+    }
+  }
+])
+
+// ============================================
 // Testimonials Data
 // ============================================
 const testimonials = computed<Testimonial[]>(() => [
@@ -245,10 +307,11 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
   <div class="w-full">
     <!-- Hero Section -->
     <UiHeroSection
+      id="hero"
       v-motion
       :initial="fadeInUp.initial"
       :visible="fadeInUp.visible"
-      :title="$t('QINARYAN')"
+      :title="$t('Membentuk masa depan melalui teknologi')"
       :subtitle="$t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.')"
       :badge="$t('Terbuka untuk pekerjaan')"
       :primary-button="$t('Portofolio')"
@@ -261,6 +324,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
 
     <!-- Partners Logo Carousel -->
     <UiInfiniteLogoCarousel
+      id="partners"
       v-motion
       :initial="fadeInUpDelayed(100).initial"
       :visible="fadeInUpDelayed(100).visible"
@@ -272,6 +336,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
 
     <!-- About Section -->
     <UiAboutSection
+      id="about"
       v-motion
       :initial="fadeInUpDelayed(150).initial"
       :visible="fadeInUpDelayed(150).visible"
@@ -283,6 +348,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
 
     <!-- Focus Areas Section -->
     <UiFocusAreasSection
+      id="focus-areas"
       v-motion
       :initial="fadeInUpDelayed(100).initial"
       :visible="fadeInUpDelayed(100).visible"
@@ -294,6 +360,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
 
     <!-- Why Us Section -->
     <UiWhyUsSection
+      id="why-us"
       v-motion
       :initial="fadeInUpDelayed(100).initial"
       :visible="fadeInUpDelayed(100).visible"
@@ -305,6 +372,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
 
     <!-- Community Section -->
     <UiCommunitySection
+      id="community"
       v-motion
       :initial="fadeInScale.initial"
       :visible="fadeInScale.visible"
@@ -316,8 +384,23 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
       :closing-highlight="$t('masa depan teknologi yang lebih baik')"
     />
 
+    <!-- Team Section -->
+    <UiTeamSection
+      id="team"
+      v-motion
+      :initial="fadeInUpDelayed(100).initial"
+      :visible="fadeInUpDelayed(100).visible"
+      :title="$t('Meet Our Team')"
+      :subtitle="$t('Tim yang berdedikasi untuk menciptakan solusi teknologi terbaik')"
+      :badge="$t('Tim Kami')"
+      :members="teamMembers"
+      :speed="35"
+      :pause-on-hover="true"
+    />
+
     <!-- Testimonial Section -->
     <UiTestimonialSection
+      id="testimonials"
       v-motion
       :initial="fadeInUpDelayed(100).initial"
       :visible="fadeInUpDelayed(100).visible"
@@ -331,6 +414,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
 
     <!-- FAQ Section -->
     <UiFaqSection
+      id="faq"
       v-motion
       :initial="fadeInUpDelayed(100).initial"
       :visible="fadeInUpDelayed(100).visible"

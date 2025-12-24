@@ -1,7 +1,7 @@
 ---
 title: Wicara Space
 description: A blog website and article publishing platform for Blora students with a modern writing system and centralized content management
-image: /image.png
+image: /portofolio/wicara-space/logo.png
 category: Website
 services:
   - Web Development
@@ -9,7 +9,7 @@ services:
   - CMS Development
 client: Blora Student Community
 date: 2024-08-10
-status: Completed in 2024
+status: Coming soon
 industry: Education & Community
 tags:
   - Nuxt 4
@@ -18,7 +18,7 @@ tags:
   - Tailwind CSS
   - MySQL
   - CMS
-_path: /portofolio/en/wicara-space
+_path: /portofolio/wicara-space
 ---
 
 # Wicara Space
@@ -33,12 +33,12 @@ Wicara Space is a blog website designed as a **space for expression and idea sha
 - CMS Development  
 
 ### Project Status
-Completed in 2024
+Coming soon
 
 ### Industry
 Education & Community
 
-![Wicara Space Preview](/portofolio/wicara-space/preview.jpg)
+![Wicara Space Preview](/portofolio/wicara-space/preview.png)
 
 ---
 
@@ -112,8 +112,8 @@ System structure is ready to expand with advanced features in the future.
 
 ## Tech Stack
 
-![Nuxt](/tech/nuxt.svg)
-![Tailwind CSS](/tech/tailwind.svg)
+ 
+
 
 - **Nuxt 4**
 - **Nuxt UI**
@@ -126,9 +126,9 @@ System structure is ready to expand with advanced features in the future.
 
 ## Visual Documentation
 
-![Wicara Space Mockup 1](/portofolio/wicara-space/mockup-1.jpg)
-![Wicara Space Mockup 2](/portofolio/wicara-space/mockup-2.jpg)
-![Wicara Space Mockup 3](/portofolio/wicara-space/mockup-3.jpg)
+![Wicara Space Mockup 1](/portofolio/wicara-space/mockup-1.png)
+![Wicara Space Mockup 2](/portofolio/wicara-space/mockup-2.png)
+![Wicara Space Mockup 3](/portofolio/wicara-space/mockup-3.png)
 
 ---
 

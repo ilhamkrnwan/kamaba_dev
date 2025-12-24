@@ -1,7 +1,7 @@
 ---
 title: Wicara Space
 description: Website blog dan platform publikasi artikel untuk mahasiswa Blora dengan sistem penulisan modern dan manajemen konten terpusat
-image: /image.png
+image: /portofolio/wicara-space/logo.png
 category: Website
 services:
   - Web Development
@@ -9,7 +9,7 @@ services:
   - CMS Development
 client: Komunitas Mahasiswa Blora
 date: 2024-08-10
-status: Selesai pada 2024
+status: Segera hadir
 industry: Pendidikan & Komunitas
 tags:
   - Nuxt 4
@@ -18,7 +18,7 @@ tags:
   - Tailwind CSS
   - MySQL
   - CMS
-_path: /portofolio/id/wicara-space
+_path: /portofolio/wicara-space
 ---
 
 # Wicara Space
@@ -33,12 +33,12 @@ Wicara Space adalah website blog yang dirancang sebagai **ruang berekspresi dan 
 - CMS Development  
 
 ### Status Proyek
-Selesai pada 2024
+Segera hadir
 
 ### Industri
 Pendidikan & Komunitas
 
-![Wicara Space Preview](/portofolio/wicara-space/preview.jpg)
+![Wicara Space Preview](/portofolio/wicara-space/preview.png)
 
 ---
 
@@ -112,9 +112,6 @@ Struktur sistem siap dikembangkan ke fitur lanjutan di masa depan.
 
 ## Teknologi yang Digunakan
 
-![Nuxt](/tech/nuxt.svg)
-![Tailwind CSS](/tech/tailwind.svg)
-
 - **Nuxt 4**
 - **Nuxt UI**
 - **Shadcn UI**
@@ -126,9 +123,9 @@ Struktur sistem siap dikembangkan ke fitur lanjutan di masa depan.
 
 ## Dokumentasi Visual
 
-![Wicara Space Mockup 1](/portofolio/wicara-space/mockup-1.jpg)
-![Wicara Space Mockup 2](/portofolio/wicara-space/mockup-2.jpg)
-![Wicara Space Mockup 3](/portofolio/wicara-space/mockup-3.jpg)
+![Wicara Space Mockup 1](/portofolio/wicara-space/mockup-1.png)
+![Wicara Space Mockup 2](/portofolio/wicara-space/mockup-2.png)
+![Wicara Space Mockup 3](/portofolio/wicara-space/mockup-3.png)
 
 ---
 

@@ -99,17 +99,9 @@ import { computed } from 'vue'
 import { cn } from '../../utils/cn'
 import type { Socials } from '~/types'
 
-interface Props {
-  name: string
-  role: string
-  bio?: string
-  image?: string
-  skills?: string[]
-  socials?: Socials
-  className?: string
-}
+import type { TeamCardProps } from '~/types'
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<TeamCardProps>(), {
   className: ''
 })
 

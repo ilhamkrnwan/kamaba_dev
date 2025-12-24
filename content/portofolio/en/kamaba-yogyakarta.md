@@ -1,7 +1,7 @@
 ---
 title: Kamaba Yogyakarta
 description: A web-based organization information system for Kamaba Yogyakarta featuring member management, events, news, and an integrated dashboard
-image: /image.png
+image: /portofolio/kamaba-yogyakarta/logo.png
 category: Website
 services:
   - Web Development
@@ -9,7 +9,7 @@ services:
   - System Information
 client: Kamaba Yogyakarta
 date: 2024-03-15
-status: Completed in 2024
+status: Coming soon
 industry: Education & Organization
 tags:
   - Nuxt 4
@@ -19,7 +19,7 @@ tags:
   - Nuxt UI v4
   - MySQL
   - CMS
-_path: /portofolio/en/kamaba-yogyakarta
+_path: /portofolio/kamaba-yogyakarta
 ---
 
 # Kamaba Yogyakarta
@@ -34,12 +34,12 @@ The Kamaba Yogyakarta website was built as a **centralized digital platform** to
 - Organization Information System  
 
 ### Project Status
-Completed in 2024
+Coming soon
 
 ### Industry
 Education & Organization
 
-![Kamaba Yogyakarta Preview](/portofolio/kamaba-yogyakarta/preview.jpg)
+![Kamaba Yogyakarta Preview](/portofolio/kamaba-yogyakarta/preview.png)
 
 ---
 
@@ -125,9 +125,8 @@ Modular and scalable code structure for long-term needs.
 ## Tech Stack
 
 ### Frontend
-![Nuxt](/tech/nuxt.svg)
-![Vue](/tech/vue.svg)
-![Tailwind CSS](/tech/tailwind.svg)
+ 
+
 
 - **Nuxt 4**
 - **Nuxt UI v4**
@@ -143,9 +142,9 @@ Modular and scalable code structure for long-term needs.
 
 ## Visual Documentation
 
-![Kamaba Yogyakarta Mockup 1](/portofolio/kamaba-yogyakarta/mockup-1.jpg)
-![Kamaba Yogyakarta Mockup 2](/portofolio/kamaba-yogyakarta/mockup-2.jpg)
-![Kamaba Yogyakarta Mockup 3](/portofolio/kamaba-yogyakarta/mockup-3.jpg)
+![Kamaba Yogyakarta Mockup 1](/portofolio/kamaba-yogyakarta/mockup-1.png)
+![Kamaba Yogyakarta Mockup 2](/portofolio/kamaba-yogyakarta/mockup-2.png)
+![Kamaba Yogyakarta Mockup 3](/portofolio/kamaba-yogyakarta/mockup-3.png)
 
 ---
 

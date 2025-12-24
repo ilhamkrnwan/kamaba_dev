@@ -1,7 +1,7 @@
 ---
 title: Mustika Amarta
 description: Official landing page website for a Barongan art group from Blora with modern visuals, informative content, and multilingual support
-image: /image.png
+image: /portofolio/mustika-amarta/logo.png
 category: Website
 services:
   - Web Development
@@ -9,7 +9,7 @@ services:
   - Landing Page
 client: Mustika Amarta Barongan
 date: 2024-05-20
-status: Completed in 2024
+status: Coming soon
 industry: Arts, Culture & Community
 tags:
   - Nuxt 4
@@ -17,7 +17,7 @@ tags:
   - Tailwind CSS
   - i18n
   - Landing Page
-_path: /portofolio/en/mustika-amarta
+_path: /portofolio/mustika-amarta
 ---
 
 # Mustika Amarta
@@ -32,12 +32,12 @@ Mustika Amarta is a landing page website designed as a **digital showcase** to i
 - Landing Page  
 
 ### Project Status
-Completed in 2024
+Coming soon
 
 ### Industry
 Arts, Culture & Community
 
-![Mustika Amarta Preview](/portofolio/mustika-amarta/preview.jpg)
+![Mustika Amarta Preview](/portofolio/mustika-amarta/preview.png)
 
 ---
 
@@ -108,8 +108,8 @@ Fast loading and smooth navigation thanks to modern web technologies.
 
 ## Tech Stack
 
-![Nuxt](/tech/nuxt.svg)
-![Tailwind CSS](/tech/tailwind.svg)
+ 
+
 
 - **Nuxt 4**
 - **Nuxt UI v4**
@@ -121,9 +121,9 @@ Fast loading and smooth navigation thanks to modern web technologies.
 
 ## Visual Documentation
 
-![Mustika Amarta Mockup 1](/portofolio/mustika-amarta/mockup-1.jpg)
-![Mustika Amarta Mockup 2](/portofolio/mustika-amarta/mockup-2.jpg)
-![Mustika Amarta Mockup 3](/portofolio/mustika-amarta/mockup-3.jpg)
+![Mustika Amarta Mockup 1](/portofolio/mustika-amarta/mockup-1.png)
+![Mustika Amarta Mockup 2](/portofolio/mustika-amarta/mockup-2.png)
+![Mustika Amarta Mockup 3](/portofolio/mustika-amarta/mockup-3.png)
 
 ---
 

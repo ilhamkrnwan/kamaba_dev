@@ -9,107 +9,19 @@
         :show-line="true"
       />
 
-      <!-- Bento Grid Custom Layout -->
+      <!-- Bento Grid with Spotlight Effect -->
       <div class="mx-auto max-w-6xl mt-12 md:mt-16">
-        <!-- Grid Container -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1: Full Web Development -->
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-          >
-            <div class="relative z-10">
-              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Full Web<br />Development
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                One-stop Website Development Solution.
-              </p>
-            </div>
-            <div class="mt-8">
-              <div class="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center">
-                <UIcon name="i-lucide-globe" class="text-6xl text-gray-400 dark:text-gray-600" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: AI & ML Solutions -->
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-          >
-            <div class="relative z-10">
-              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                AI & ML Solutions
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                AI/ML consulting and model dev, Data analysis, Performance tracking
-              </p>
-            </div>
-            <div class="mt-8">
-              <div class="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center">
-                <UIcon name="i-lucide-cpu" class="text-6xl text-gray-400 dark:text-gray-600" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: App Development Package -->
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-          >
-            <div class="relative z-10">
-              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                App Development<br />Package
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                Provide customized mobile application development services to enhance user experience
-              </p>
-            </div>
-            <div class="mt-8">
-              <div class="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center">
-                <UIcon name="i-lucide-smartphone" class="text-6xl text-gray-400 dark:text-gray-600" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Product Development (Spans 2 columns on large screens) -->
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-8 lg:col-span-2 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-          >
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div class="relative z-10">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Product Development<br />(Cooperation)
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300">
-                  Provide innovative product solutions
-                </p>
-              </div>
-              <div>
-                <div class="aspect-[16/10] bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center">
-                  <UIcon name="i-lucide-lightbulb" class="text-6xl text-gray-400 dark:text-gray-600" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5: Cybersecurity Services -->
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-          >
-            <div class="relative z-10">
-              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Cybersecurity<br />services
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                Protect digital assets and reduce security risks
-              </p>
-            </div>
-            <div class="mt-8">
-              <div class="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center">
-                <UIcon name="i-lucide-shield-check" class="text-6xl text-gray-400 dark:text-gray-600" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <UiBentoGrid :columns="3">
+          <UiBentoCard
+            v-for="(card, index) in focusCards"
+            :key="index"
+            :title="card.title"
+            :description="card.description"
+            :icon="card.icon"
+            :size="card.size"
+            spotlight
+          />
+        </UiBentoGrid>
       </div>
     </div>
   </section>
@@ -127,6 +39,39 @@ withDefaults(defineProps<Props>(), {
   subtitle: 'Comprehensive technology solutions tailored to your business needs',
   badge: 'Services',
 })
+
+const focusCards = [
+  {
+    title: 'Full Web Development',
+    description: 'One-stop Website Development Solution.',
+    icon: 'i-lucide-globe',
+    size: 'normal'
+  },
+  {
+    title: 'AI & ML Solutions',
+    description: 'AI/ML consulting and model dev, Data analysis, Performance tracking',
+    icon: 'i-lucide-cpu',
+    size: 'normal'
+  },
+  {
+    title: 'App Development Package',
+    description: 'Provide customized mobile application development services to enhance user experience',
+    icon: 'i-lucide-smartphone',
+    size: 'normal'
+  },
+  {
+    title: 'Product Development (Cooperation)',
+    description: 'Provide innovative product solutions',
+    icon: 'i-lucide-lightbulb',
+    size: 'wide'
+  },
+  {
+    title: 'Cybersecurity Services',
+    description: 'Protect digital assets and reduce security risks',
+    icon: 'i-lucide-shield-check',
+    size: 'normal'
+  }
+]
 </script>
 
 <style scoped>

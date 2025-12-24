@@ -56,7 +56,7 @@ const onSecondaryAction = () => emit('secondaryAction')
 
         <!-- Main heading -->
         <h1
-          class="mb-6 bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-4xl font-bold text-transparent md:text-6xl lg:text-7xl"
+          class="pb-6 bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-4xl font-bold text-transparent md:text-6xl lg:text-7xl"
         >
           {{ title }}
         </h1>

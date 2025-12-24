@@ -11,6 +11,16 @@ export interface PortofolioCollectionItem {
   category?: string
   tags?: string[]
   date?: string
+  // Extended fields for detail page
+  services?: string[]
+  client?: string
+  status?: string
+  industry?: string
+}
+
+export interface PortfolioDetailPage extends PortofolioCollectionItem {
+  body?: unknown
+  _path?: string
 }
 
 export interface BlogPost {
