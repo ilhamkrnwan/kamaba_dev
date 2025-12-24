@@ -256,7 +256,7 @@ const faqItems = computed<FaqItem[]>(() => [
     icon: 'i-lucide-info',
     link: {
       text: t('Pelajari lebih lanjut'),
-      url: '/about'
+      url: '/home#about'
     }
   },
   {
@@ -298,7 +298,7 @@ const faqItems = computed<FaqItem[]>(() => [
 // Event Handlers
 // ============================================
 const handleContactClick = () => navigateTo('/home#contact')
-const handleLearnMoreClick = () => navigateTo('/about')
+const handleLearnMoreClick = () => navigateTo('/home#about')
 const handlePortfolioClick = () => navigateTo('/portofolio')
 const handleCollaborateClick = () => navigateTo('/home#contact')
 </script>

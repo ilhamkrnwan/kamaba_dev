@@ -67,7 +67,7 @@ const handleContactClick = () => {
 }
 
 const handleLearnMoreClick = () => {
-  navigateTo('/about')
+  navigateTo('/home#about')
 }
 
 useSeoMeta({
