@@ -71,7 +71,7 @@ const handleLearnMoreClick = () => {
 }
 
 useSeoMeta({
-  title: () => t('Portofolio - QINARYAN'),
+  title: () => t('Portofolio - NataKarsa'),
   description: () => t('Lihat hasil karya dan proyek yang telah kami kerjakan'),
 })
 </script>

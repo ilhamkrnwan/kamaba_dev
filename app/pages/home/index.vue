@@ -17,7 +17,7 @@ const { t } = useI18n()
 // SEO Meta
 // ============================================
 useSeoMeta({
-  title: t('QINARYAN - Berkarya dengan Teknologi'),
+  title: t('NataKarsa - Berkarya dengan Teknologi'),
   description: t('Komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat.'),
 })
 
@@ -172,18 +172,18 @@ const teamMembers = computed(() => [
   },
   {
     id: 2,
-    name: 'Khairul Anam',
+    name: 'Mohamad Khairul Anam',
     role: t('Full Stack Developer'),
     profileImage: '/team/khairul-profile.png',
     revealImage: '/team/khairul-reveal.png',
     socials: {
-      github: 'https://github.com/khairulanam',
-      linkedin: 'https://linkedin.com/in/khairulanam'
+      github: 'https://github.com/asixnam',
+      linkedin: 'https://linkedin.com/in/asixnam'
     }
   },
   {
     id: 3,
-    name: 'Muhammad Irham',
+    name: 'Muhammad Irham Zubaidi',
     role: t('UI/UX Designer'),
     profileImage: '/team/irham-profile.png',
     revealImage: '/team/irham-reveal.png',
@@ -205,12 +205,23 @@ const teamMembers = computed(() => [
   },
   {
     id: 5,
-    name: 'Prasetyo Bambang',
+    name: 'Agus Prastyo',
     role: t('Backend Developer'),
     profileImage: '/team/prasetyo-profile.png',
     revealImage: '/team/prasetyo-reveal.png',
     socials: {
-      github: 'https://github.com/prasetyobambang',
+      github: 'https://github.com/agusp1257',
+      linkedin: 'https://linkedin.com/in/prasetyobambang'
+    }
+  },
+  {
+    id: 5,
+    name: 'Rajwa Khoirunisa Septiamalia',
+    role: t('Backend Developer'),
+    profileImage: '/team/prasetyo-profile.png',
+    revealImage: '/team/prasetyo-reveal.png',
+    socials: {
+      github: 'https://github.com/agusp1257',
       linkedin: 'https://linkedin.com/in/prasetyobambang'
     }
   }
@@ -222,7 +233,7 @@ const teamMembers = computed(() => [
 const testimonials = computed<Testimonial[]>(() => [
   {
     id: 1,
-    quote: t('QINARYAN memberikan kinerja terbaiknya dalam membuat Website! Sangat profesional dan hasil memuaskan.'),
+    quote: t('NataKarsa memberikan kinerja terbaiknya dalam membuat Website! Sangat profesional dan hasil memuaskan.'),
     name: 'Dhimas Sulistio',
     position: t('Web Developer'),
     rating: '20° FS',
@@ -251,8 +262,8 @@ const testimonials = computed<Testimonial[]>(() => [
 // ============================================
 const faqItems = computed<FaqItem[]>(() => [
   {
-    question: t('Apa itu QINARYAN?'),
-    answer: t('QINARYAN adalah komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat. Kami berkomitmen pada prinsip open source dan kolaborasi.'),
+    question: t('Apa itu NataKarsa?'),
+    answer: t('NataKarsa adalah komunitas pengembang digital yang berfokus pada pengembangan teknologi modern untuk kebutuhan pendidikan, organisasi, dan masyarakat. Kami berkomitmen pada prinsip open source dan kolaborasi.'),
     icon: 'i-lucide-info',
     link: {
       text: t('Pelajari lebih lanjut'),
@@ -260,17 +271,17 @@ const faqItems = computed<FaqItem[]>(() => [
     }
   },
   {
-    question: t('Bagaimana cara bergabung dengan QINARYAN?'),
+    question: t('Bagaimana cara bergabung dengan NataKarsa?'),
     answer: t('Anda dapat bergabung dengan menghubungi kami melalui halaman kontak atau mengikuti akun media sosial kami. Kami terbuka untuk semua orang yang memiliki passion di bidang teknologi, baik mahasiswa aktif, alumni, maupun profesional.'),
     icon: 'i-lucide-user-plus'
   },
   {
-    question: t('Apakah layanan QINARYAN berbayar?'),
+    question: t('Apakah layanan NataKarsa berbayar?'),
     answer: t('Untuk proyek komunitas dan edukasi, sebagian besar layanan kami gratis dan open source. Untuk proyek komersial atau kebutuhan khusus, kami menawarkan paket layanan dengan harga yang kompetitif. Hubungi kami untuk informasi lebih lanjut.'),
     icon: 'i-lucide-dollar-sign'
   },
   {
-    question: t('Teknologi apa saja yang digunakan QINARYAN?'),
+    question: t('Teknologi apa saja yang digunakan NataKarsa?'),
     answer: t('Kami menggunakan teknologi modern seperti Vue.js, Nuxt, React, Next.js untuk web development. Untuk mobile, kami menggunakan React Native dan Flutter. Kami juga berpengalaman dengan berbagai backend teknologi dan cloud services.'),
     icon: 'i-lucide-code-2',
     link: {
@@ -284,12 +295,12 @@ const faqItems = computed<FaqItem[]>(() => [
     icon: 'i-lucide-clock'
   },
   {
-    question: t('Apakah QINARYAN menerima kontribusi open source?'),
+    question: t('Apakah NataKarsa menerima kontribusi open source?'),
     answer: t('Tentu! Kami sangat terbuka untuk kontribusi dari siapa saja. Semua proyek open source kami tersedia di GitHub dan kami menyambut pull request, bug reports, dan saran dari komunitas.'),
     icon: 'i-lucide-heart',
     link: {
       text: t('Kunjungi GitHub kami'),
-      url: 'https://github.com/qinaryan'
+      url: 'https://github.com/NataKarsa'
     }
   }
 ])
@@ -340,8 +351,8 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
       v-motion
       :initial="fadeInUpDelayed(150).initial"
       :visible="fadeInUpDelayed(150).visible"
-      :title="$t('Tentang QINARYAN')"
-      :subtitle="$t('QINARYAN dimulai dari visi sederhana: menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat. Kami percaya bahwa teknologi harus mudah diakses, transparan, dan memberdayakan.')"
+      :title="$t('Tentang NataKarsa')"
+      :subtitle="$t('NataKarsa dimulai dari visi sederhana: menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat. Kami percaya bahwa teknologi harus mudah diakses, transparan, dan memberdayakan.')"
       :cta-text="$t('Lihat Karya Kami')"
       :services-title="$t('Apa Yang Kami Lakukan')"
     />
@@ -364,7 +375,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
       v-motion
       :initial="fadeInUpDelayed(100).initial"
       :visible="fadeInUpDelayed(100).visible"
-      :title="$t('Mengapa Memilih QINARYAN?')"
+      :title="$t('Mengapa Memilih NataKarsa?')"
       :badge="$t('Keunggulan Kami')"
       :quote="$t('Teknologi terbaik adalah yang membuat hidup lebih mudah, bukan lebih rumit.')"
       :advantages="advantages"
@@ -376,7 +387,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
       v-motion
       :initial="fadeInScale.initial"
       :visible="fadeInScale.visible"
-      :title="$t('Siapa Saja yang Ada di QINARYAN?')"
+      :title="$t('Siapa Saja yang Ada di NataKarsa?')"
       :subtitle="$t('Komunitas kami terdiri dari berbagai latar belakang yang bekerja sama untuk tujuan yang sama')"
       :badge="$t('Komunitas')"
       :members="communityMembers"
@@ -419,7 +430,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
       :initial="fadeInUpDelayed(100).initial"
       :visible="fadeInUpDelayed(100).visible"
       :title="$t('Pertanyaan yang Sering Diajukan')"
-      :subtitle="$t('Temukan jawaban untuk pertanyaan umum tentang QINARYAN dan layanan kami')"
+      :subtitle="$t('Temukan jawaban untuk pertanyaan umum tentang NataKarsa dan layanan kami')"
       :badge="$t('FAQ')"
       :items="faqItems"
       :show-cta="true"

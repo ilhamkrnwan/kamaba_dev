@@ -95,8 +95,8 @@ defineEmits<{
 }>()
 
 withDefaults(defineProps<Props>(), {
-  title: 'Tentang QINARYAN',
-  subtitle: 'QINARYAN dimulai dari visi sederhana: menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat. Kami percaya bahwa teknologi harus mudah diakses, transparan, dan memberdayakan.',
+  title: 'Tentang NataKarsa',
+  subtitle: 'NataKarsa dimulai dari visi sederhana: menciptakan ekosistem teknologi yang inklusif dan berdampak positif bagi masyarakat. Kami percaya bahwa teknologi harus mudah diakses, transparan, dan memberdayakan.',
   ctaText: 'Lihat Karya Kami',
   servicesTitle: 'Apa Yang Kami Lakukan',
   services: () => [

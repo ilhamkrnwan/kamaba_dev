@@ -75,7 +75,7 @@ watchEffect(() => {
       date: page.value.date,
       tags: page.value.tags,
       category: page.value.category,
-      author: 'QINARYAN Team'
+      author: 'NataKarsa Team'
     })
   }
 })

@@ -45,7 +45,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  title: 'Siapa Saja yang Ada di QINARYAN?',
+  title: 'Siapa Saja yang Ada di NataKarsa?',
   subtitle: 'Komunitas kami terdiri dari berbagai latar belakang yang bekerja sama untuk tujuan yang sama',
   badge: 'Komunitas',
   members: () => [

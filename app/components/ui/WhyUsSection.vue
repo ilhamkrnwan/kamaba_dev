@@ -42,7 +42,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  title: 'Mengapa Memilih QINARYAN?',
+  title: 'Mengapa Memilih NataKarsa?',
   badge: 'Keunggulan Kami',
   subtitle: 'Keunggulan yang membuat kami berbeda dan dapat diandalkan.',
   advantages: () => [

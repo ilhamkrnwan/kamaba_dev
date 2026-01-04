@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
   testimonials: () => [
     {
       id: 1,
-      quote: 'QINARYAN memberikan kinerja terbaiknya dalam membuat Website! Sangat profesional dan hasil memuaskan.',
+      quote: 'NataKarsa memberikan kinerja terbaiknya dalam membuat Website! Sangat profesional dan hasil memuaskan.',
       name: 'Dhimas Sulistio',
       position: 'Web Developer',
       rating: '20° FS',

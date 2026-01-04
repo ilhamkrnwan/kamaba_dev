@@ -46,9 +46,9 @@ const supportLinks = [
           >
             <div class="p-6 rounded-2xl border border-neutral-200/50 dark:border-white/[0.1] bg-neutral-50/50 dark:bg-neutral-900/50">
               <NuxtLinkLocale to="/" class="flex items-center gap-3 mb-4">
-                <NuxtImg src="/qinaryan.png" width="48" height="48" alt="qinaryan" class="rounded-xl" />
+                <NuxtImg src="/NataKarsa.png" width="30" height="20" alt="NataKarsa" class="rounded-xl" />
                 <p class="font-['Baumans'] text-2xl text-neutral-800 dark:text-white">
-                  QINARYAN
+                  NataKarsa
                 </p>
               </NuxtLinkLocale>
 
@@ -67,7 +67,7 @@ const supportLinks = [
                   <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-neutral-100 dark:bg-white/10">
                     <UIcon name="lucide-mail" class="w-4 h-4 text-[#3d39a1]" />
                   </div>
-                  <span>Qinaryan@gmail.com</span>
+                  <span>NataKarsa@gmail.com</span>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ const supportLinks = [
         <div class="flex flex-col md:flex-row items-center justify-between gap-4">
           <!-- Copyright -->
           <p class="text-sm text-neutral-500 dark:text-neutral-500 text-center md:text-left">
-            © {{ year }} QINARYAN. All rights reserved.
+            © {{ year }} NataKarsa. All rights reserved.
           </p>
 
           <!-- CTA Button -->
