@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: t('KAMABA DEV - Berkarya dengan Teknologi'),
+  title: t('NATA KARSA - Berkarya dengan Teknologi'),
   description: t('Menyatukan semangat untuk belajar dan berkreatif bersama dalam satu komunitas. Misi kami adalah melahirkan teknologi modern yang menjadi solusi bagi tantangan di sektor pendidikan, organisasi, dan sosial kemasyarakatan.'),
 })
 </script>
@@ -11,7 +11,7 @@ useSeoMeta({
   <div class="min-h-screen">
     <!-- Hero Section -->
     <UiHeroSection
-      :title="$t('KAMABA DEV')"
+      :title="$t('NATA KARSA')"
       :subtitle="$t('Menyatukan semangat untuk belajar dan berkreatif bersama dalam satu komunitas. Misi kami adalah melahirkan teknologi modern yang menjadi solusi bagi tantangan di sektor pendidikan, organisasi, dan sosial kemasyarakatan.')"
       :badge="$t('Terbuka untuk pekerjaan')"
       :primary-button="$t('Portofolio')"
@@ -42,7 +42,7 @@ useSeoMeta({
     <section class="relative overflow-hidden py-20 md:py-32" id="about">
       <div class="container mx-auto px-4">
         <UiSectionHeading
-          :title="$t('Tentang KAMABA DEV')"
+          :title="$t('Tentang NATA KARSA')"
           :subtitle="$t('Kami adalah komunitas pengembang digital yang berkomitmen untuk menciptakan solusi teknologi inovatif dan berkelanjutan bagi pendidikan, organisasi, dan masyarakat luas.')"
           :badge="$t('Siapa Kami')"
           size="md"
