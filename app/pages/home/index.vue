@@ -207,8 +207,8 @@ const teamMembers = computed(() => [
     id: 5,
     name: 'Agus Prastyo',
     role: t('Backend Developer'),
-    profileImage: '/team/prasetyo-profile.png',
-    revealImage: '/team/prasetyo-reveal.png',
+    profileImage: '/team/prasetyo-profile.jpeg',
+    revealImage: '/team/prasetyo-reveal.jpeg',
     socials: {
       github: 'https://github.com/agusp1257',
       linkedin: 'https://linkedin.com/in/prasetyobambang'
