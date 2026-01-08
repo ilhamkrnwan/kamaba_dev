@@ -46,7 +46,7 @@ const supportLinks = [
           >
             <div class="p-6 rounded-2xl border border-neutral-200/50 dark:border-white/[0.1] bg-neutral-50/50 dark:bg-neutral-900/50">
               <NuxtLinkLocale to="/" class="flex items-center gap-3 mb-4">
-                <NuxtImg src="/NataKarsa.png" width="30" height="20" alt="NataKarsa" class="rounded-xl" />
+                <NuxtImg src="/NataKarsa.png" width="20" height="20" alt="NataKarsa" class="" />
                 <p class="font-['Baumans'] text-2xl text-neutral-800 dark:text-white">
                   NataKarsa
                 </p>
