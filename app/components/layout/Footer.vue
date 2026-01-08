@@ -61,13 +61,13 @@ const supportLinks = [
                   <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-neutral-100 dark:bg-white/10">
                     <UIcon name="lucide-map-pin" class="w-4 h-4 text-[#3d39a1]" />
                   </div>
-                  <span>Sleman, DI Yogyakarta</span>
+                  <span>Gamping, Sleman, DI Yogyakarta</span>
                 </div>
                 <div class="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-400">
                   <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-neutral-100 dark:bg-white/10">
                     <UIcon name="lucide-mail" class="w-4 h-4 text-[#3d39a1]" />
                   </div>
-                  <span>NataKarsa@gmail.com</span>
+                  <span>natakarsadeveloper@gmail.com</span>
                 </div>
               </div>
             </div>
