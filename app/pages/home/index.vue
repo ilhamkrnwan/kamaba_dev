@@ -47,23 +47,6 @@ const fadeInScaleUp = {
 // ============================================
 // Hero Section Data
 // ============================================
-const heroStats = computed<HeroStat[]>(() => [
-  {
-    value: t('20+'),
-    label: t('Proyek'),
-    description: t('Proyek yang telah diselesaikan')
-  },
-  {
-    value: t('50+'),
-    label: t('Anggota'),
-    description: t('Anggota aktif komunitas')
-  },
-  {
-    value: t('100%'),
-    label: t('Open Source'),
-    description: t('Semua proyek open source')
-  }
-])
 
 // ============================================
 // Focus Areas Data
@@ -327,6 +310,7 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
       :badge="$t('Terbuka untuk pekerjaan')"
       :primary-button="$t('Portofolio')"
       :secondary-button="$t('Mari Berkolaborasi!')"
+      image="/hero-illustration.png"
       :stats="heroStats"
       class="font-['Baumans']"
       @primary-action="handlePortfolioClick"

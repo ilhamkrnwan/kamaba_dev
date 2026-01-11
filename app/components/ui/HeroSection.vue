@@ -9,6 +9,7 @@ interface Props {
   badge?: string
   primaryButton?: string
   secondaryButton?: string
+  image?: string
   stats?: Stat[]
 }
 
@@ -34,7 +35,7 @@ const onSecondaryAction = () => emit('secondaryAction')
 </script>
 
 <template>
-  <section class="relative flex min-h-screen w-full flex-col items-center justify-center">
+  <section class="relative flex min-h-screen w-full flex-col items-center justify-start overflow-hidden pt-20 pb-12 lg:pt-32 lg:pb-20">
     <!-- Spotlight effects -->
     <UiSpotlight
       class="-top-40 left-0 md:-top-20 md:left-60"
@@ -46,75 +47,85 @@ const onSecondaryAction = () => emit('secondaryAction')
     />
 
     <!-- Content -->
-    <div class="relative z-10 mx-auto w-full max-w-6xl px-4 md:px-6 py-24 animate-fade-in-up">
-      <div class="text-center">
-        <!-- Badge -->
-        <div class="mb-8 inline-flex items-center rounded-full border border-border bg-card px-4 py-1.5 text-sm">
-          <span class="animate-pulse mr-2 h-2 w-2 rounded-full bg-green-500" />
-          <span class="text-muted-foreground">{{ badge }}</span>
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-6 flex flex-col items-center animate-fade-in-up">
+      
+        <!-- Text Header -->
+        <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-8 sm:mb-12">
+          <!-- Badge -->
+          <div v-if="badge" class="mb-6 inline-flex items-center rounded-full border border-border bg-card/50 backdrop-blur px-4 py-1.5 text-sm shadow-sm transition-colors hover:bg-card">
+            <span class="animate-pulse mr-2 h-2 w-2 rounded-full bg-green-500" />
+            <span class="text-muted-foreground font-medium">{{ badge }}</span>
+          </div>
+
+          <!-- Main heading -->
+          <h1
+            class="pb-4 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-4xl font-extrabold text-transparent md:text-6xl lg:text-7xl tracking-tight leading-tight"
+          >
+            {{ title }}
+          </h1>
         </div>
 
-        <!-- Main heading -->
-        <h1
-          class="pb-6 bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-4xl font-bold text-transparent md:text-6xl lg:text-7xl"
-        >
-          {{ title }}
-        </h1>
-
-        <!-- Subtitle -->
-        <p
-          class="mx-auto mb-12 max-w-3xl text-lg text-muted-foreground md:text-xl"
-        >
-          {{ subtitle }}
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <UButton
-            size="xl"
-            color="primary"
-            class="group relative overflow-hidden"
-            @click="onPrimaryAction"
-          >
-            <span class="relative z-10">{{ primaryButton }}</span>
-            <span class="absolute inset-0 -z-0 bg-gradient-to-r from-primary to-blue-600 opacity-0 transition-opacity group-hover:opacity-100" />
-          </UButton>
-          
-          <UButton
-            size="xl"
-            variant="outline"
-            @click="onSecondaryAction"
-          >
-            {{ secondaryButton }}
-          </UButton>
-        </div>
-
-        <!-- Stats or features -->
-        <div v-if="stats && stats.length > 0" class="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          <div
-            v-for="(stat, idx) in stats"
-            :key="idx"
-            class="group rounded-lg border border-border bg-card/50 p-6 backdrop-blur transition-all hover:border-primary/50 hover:shadow-lg"
-          >
-            <div class="mb-2 text-4xl font-bold text-primary">
-              {{ stat.value }}
-            </div>
-            <div class="text-sm font-medium text-foreground">
-              {{ stat.label }}
-            </div>
-            <p class="mt-2 text-xs text-muted-foreground">
-              {{ stat.description }}
-            </p>
+        <!-- Central Image -->
+        <div class="relative w-full max-w-lg lg:max-w-xl mx-auto perspective-1000">
+          <div class="relative transform transition-transform duration-700 hover:scale-105">
+            <!-- Glow effect -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] rounded-full bg-primary/20 blur-[100px] opacity-50 pointer-events-none" />
+            
+            <!-- Image -->
+             <img 
+               v-if="image" 
+               :src="image" 
+               alt="Hero Illustration" 
+               class="relative z-60 w-full h-auto object-contain drop-shadow-2xl"
+             />
+             <div v-else class="relative z-50flex items-center justify-center w-full aspect-square bg-muted/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <span class="text-muted-foreground">No Image</span>
+             </div>
           </div>
         </div>
-      </div>
+
+        <!-- Bottom Content -->
+        <div class="relative z-20 flex flex-col items-center text-center max-w-3xl mx-auto -mt-12 sm:-mt-20">
+           <!-- Subtitle with glass effect -->
+          <div class="mb-8 rounded-2xl border border-white/10 bg-background/30 backdrop-blur-md p-6 sm:p-8 shadow-2xl max-w-2xl mx-auto">
+            <p
+              class="text-lg text-foreground/90 md:text-xl font-medium leading-relaxed"
+            >
+              {{ subtitle }}
+            </p>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col items-center gap-4 sm:flex-row w-full sm:w-auto">
+            <UButton
+              size="xl"
+              color="primary"
+              class="group relative overflow-hidden w-full sm:w-auto min-w-[160px] justify-center rounded-full"
+              @click="onPrimaryAction"
+            >
+              <span class="relative z-10 font-bold tracking-wide">{{ primaryButton }}</span>
+              <span class="absolute inset-0 -z-0 bg-gradient-to-r from-primary to-orange-500 opacity-0 transition-opacity group-hover:opacity-100" />
+            </UButton>
+            
+            <UButton
+              size="xl"
+              color="warning"
+              variant="solid"
+              class="w-full sm:w-auto min-w-[160px] justify-center rounded-full font-bold tracking-wide"
+              @click="onSecondaryAction"
+            >
+              {{ secondaryButton }}
+            </UButton>
+          </div>
+        </div>
+
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
-      <div class="animate-bounce">
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block">
+      <div class="animate-bounce p-2 rounded-full bg-background/50 backdrop-blur border border-border/50 text-muted-foreground">
         <svg
-          class="h-6 w-6 text-muted-foreground"
+          class="h-5 w-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

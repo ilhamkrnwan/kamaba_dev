@@ -4,6 +4,14 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        // Ganti '/favicon.png' dengan nama file gambar Anda di folder 'public'
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      ]
+    }
+  },
   runtimeConfig: {
     public: {
       apiUrl: process.env.NUXT_PUBLIC_API_URL || "http://localhost:3000/api",
@@ -54,9 +62,9 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Baumans: true,
-      Roboto: true 
+      Roboto: true
     },
-    display: 'swap' 
+    display: 'swap'
   },
   css: ["./app/assets/css/main.css"],
   vite: {
