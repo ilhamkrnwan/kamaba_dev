@@ -1,11 +1,10 @@
 <script lang="ts" setup>
-import type { 
-  HeroStat, 
-  Feature, 
-  Advantage, 
-  Member, 
-  Testimonial, 
-  FaqItem 
+import type {  
+  Feature,
+  Advantage,
+  Member,
+  Testimonial,
+  FaqItem
 } from '~/types'
 
 // ============================================
@@ -311,7 +310,6 @@ const handleCollaborateClick = () => navigateTo('/home#contact')
       :primary-button="$t('Portofolio')"
       :secondary-button="$t('Mari Berkolaborasi!')"
       image="/hero-illustration.png"
-      :stats="heroStats"
       class="font-['Baumans']"
       @primary-action="handlePortfolioClick"
       @secondary-action="handleCollaborateClick"

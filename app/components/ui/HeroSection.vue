@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useColorMode } from '#imports'
-import type { Stat } from '~/types'
 
 interface Props {
   title: string
@@ -10,7 +9,6 @@ interface Props {
   primaryButton?: string
   secondaryButton?: string
   image?: string
-  stats?: Stat[]
 }
 
 const props = withDefaults(defineProps<Props>(), {
